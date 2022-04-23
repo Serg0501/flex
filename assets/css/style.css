@@ -9,6 +9,7 @@ for contsiner:
 3. align-items выравнивание эл-тов по оси Y (вертикали)
 4. flex-wrap как сильно будут сжиматься эл-ты и будет ли
 перенос на другую строку
+5.align-content
 for item для эл-та:
 1.flex-grow сколько нужно эл-ту свободного пространства
 коэф увеличения
@@ -16,53 +17,65 @@ for item для эл-та:
 коэф уменьшения
 3.flex-basis ~= width для эл-та
 auto.0.200px.max-content.min-content. fil-content
-4.align self
+
 
 */
-.justifyContentCenter{
-justify-content: center;
+
+body{
+background-color: gray;
+}
+    
+.cardConteiner{
+width: 400px;
+height: 500px;
+border-radius: 10px;
+background-color: white;
+margin: 0px;
 }
 
-.justifyContentBetween{
-    justify-content: space-between;
+.headerImg{
+    height: 30%;
+    background-image: 
+    url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF7crIRjtvePvpl8R-NkMAQtnCtte2YOKSwGY0BOzWknIw7iXVNYTQBOR0NvG3HYYCl7s&usqp=CAU');
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
-.dirRow{
-    flex-direction:row;
-}
-
-.dirCol{
+.infoContainer{
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-items: center;
 }
 
-.container{
+.userImg{
+    width: 160px;
+    height: 160px;
+    
+    
+}
+
+.userImg>img{
+    width: inherit;
+    height: inherit;
+    border-radius: 80px;
+}
+}
+
+.userInfo{
+
+}
+
+.buttonConteiner{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap:nowrap;
+
 }
 
-.containerStyles{
-    background-color: rgb(0, 119, 255);
-    width: 850px;
-    height: 500px;
-}
-
-.item{
-    width: 200px;
-    height: 100px;
-    flex-grow: 1;
-}
-
-.itemStyles{
-    background-color: gray;
-    border: 2px solid black;
-    text-align: center;
-    padding: 20px;
-    font-size: 20px;
-    color: white;
-}
-
-.grow1{
-
+.mediaLink{
+width: 50px;
+height: 50px;
 }
