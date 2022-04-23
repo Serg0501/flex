@@ -1,0 +1,68 @@
+/*
+FLEXBOX
+!!!! использовать технологию для эл-та только когда 
+родитель выставлен во FLEX!!!!!!
+for contsiner:
+по умолчанию распред по горизонтале X
+1.justify-content  распределение пространство между и вокруг эл-тов
+2. flex-direction ( ось Х, ось У) изменение направления контейнеров
+3. align-items выравнивание эл-тов по оси Y (вертикали)
+4. flex-wrap как сильно будут сжиматься эл-ты и будет ли
+перенос на другую строку
+for item для эл-та:
+1.flex-grow сколько нужно эл-ту свободного пространства
+коэф увеличения
+2.flex-shrink сколько нужно эл-ту свободного пространства
+коэф уменьшения
+3.flex-basis ~= width для эл-та
+auto.0.200px.max-content.min-content. fil-content
+4.align self
+
+*/
+.justifyContentCenter{
+justify-content: center;
+}
+
+.justifyContentBetween{
+    justify-content: space-between;
+}
+
+.dirRow{
+    flex-direction:row;
+}
+
+.dirCol{
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:nowrap;
+}
+
+.containerStyles{
+    background-color: rgb(0, 119, 255);
+    width: 850px;
+    height: 500px;
+}
+
+.item{
+    width: 200px;
+    height: 100px;
+    flex-grow: 1;
+}
+
+.itemStyles{
+    background-color: gray;
+    border: 2px solid black;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.grow1{
+
+}
