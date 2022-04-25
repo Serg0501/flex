@@ -1,67 +1,69 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
 
-.list>li{
-display: inline-block;
+body{
+    background-color: lightgray;
 }
-.color1{ 
-    background-image: linear-gradient(to right, rgba(248, 8, 8, 0.041), rgb(238, 28, 116));
-}
-.color2{
-    background-image: linear-gradient(to right, rgba(0, 0, 255, 0.041), blue);
-}
-.color3{
-    background-image: linear-gradient(to right, rgba(49, 228, 13, 0.041), rgb(142, 245, 8));
-}
-
-.container{
-    width: 450px;
-    height: 300px;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin: auto;
-    position: relative ; top: 180px;
+.cardConteiner{
+    width: 400px;
+    height: 500px;
+    border: 1px solid white;
+    border-radius: 50px;
+    background-color: white;
     overflow: hidden;
-}
-
-
-.circle1{
-    width: 200px;
-    height: 200px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 100px;
-    position: absolute ; top: -30px; left: 340px;
-}
-
-.circle2{
-    width: 300px;
-    height: 300px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 150px;
-    position: absolute ; bottom: -80px; left: 250px;
-}
-.info{
-    padding-left: 20px;
+    margin: auto;/*как отцентровать основной контейнер?????*/
+    position: relative; top: 70px;
+    }
+    
+    .headerImg{
+        height: 30%;
+        background-image: 
+        url('https://st.depositphotos.com/1288156/4466/i/600/depositphotos_44660695-stock-photo-himalaya-mountains-black-and-white.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit: cover;
+    }
+    
+    .infoContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       align-items: center;
+       margin-top: -80px;
     
     }
-
-.card{
-text-align: left;
-font-size: x-large;
-font-weight: bold;
-padding-top: 20px;
-}
-
-.for{
-    padding-top: 80px;
-    font-weight: bold;
-}
-
-.namber{
-    font-size: large;
-    padding-top: 80px;
-}
     
+    .userImg{
+        width: 160px;
+        height: 160px;
+        border-radius: 80px;
+        border: 4px solid white;  
+        display: block;
+        
+    }
+    
+    .userImg>img{
+        width: inherit;
+        height: inherit;
+        border-radius: 80px;
+        
+    }
+    
+    
+    .userInfo{
+    text-align: center;
+    }
+    
+    .userInfo>h3{
+    color: rgba(169, 169, 169, 0.425);
+    }
+
+    .buttonConteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .mediaLink{
+        width: inherit;
+        height: inherit;
+        text-align: center;
+    }
