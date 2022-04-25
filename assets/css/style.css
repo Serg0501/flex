@@ -1,81 +1,67 @@
-/*
-FLEXBOX
-!!!! использовать технологию для эл-та только когда 
-родитель выставлен во FLEX!!!!!!
-for contsiner:
-по умолчанию распред по горизонтале X
-1.justify-content  распределение пространство между и вокруг эл-тов
-2. flex-direction ( ось Х, ось У) изменение направления контейнеров
-3. align-items выравнивание эл-тов по оси Y (вертикали)
-4. flex-wrap как сильно будут сжиматься эл-ты и будет ли
-перенос на другую строку
-5.align-content
-for item для эл-та:
-1.flex-grow сколько нужно эл-ту свободного пространства
-коэф увеличения
-2.flex-shrink сколько нужно эл-ту свободного пространства
-коэф уменьшения
-3.flex-basis ~= width для эл-та
-auto.0.200px.max-content.min-content. fil-content
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.list>li{
+display: inline-block;
+}
+.color1{ 
+    background-image: linear-gradient(to right, rgba(248, 8, 8, 0.041), rgb(238, 28, 116));
+}
+.color2{
+    background-image: linear-gradient(to right, rgba(0, 0, 255, 0.041), blue);
+}
+.color3{
+    background-image: linear-gradient(to right, rgba(49, 228, 13, 0.041), rgb(142, 245, 8));
+}
+
+.container{
+    width: 450px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: auto;
+    position: relative ; top: 180px;
+    overflow: hidden;
+}
 
 
-*/
+.circle1{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 100px;
+    position: absolute ; top: -30px; left: 340px;
+}
 
-body{
-background-color: gray;
+.circle2{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 150px;
+    position: absolute ; bottom: -80px; left: 250px;
+}
+.info{
+    padding-left: 20px;
+    
+    }
+
+.card{
+text-align: left;
+font-size: x-large;
+font-weight: bold;
+padding-top: 20px;
+}
+
+.for{
+    padding-top: 80px;
+    font-weight: bold;
+}
+
+.namber{
+    font-size: large;
+    padding-top: 80px;
 }
     
-.cardConteiner{
-width: 400px;
-height: 500px;
-border-radius: 10px;
-background-color: white;
-margin: 0px;
-}
-
-.headerImg{
-    height: 30%;
-    background-image: 
-    url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF7crIRjtvePvpl8R-NkMAQtnCtte2YOKSwGY0BOzWknIw7iXVNYTQBOR0NvG3HYYCl7s&usqp=CAU');
-    background-size: cover;
-    background-repeat: no-repeat;
-
-}
-
-.infoContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-items: center;
-}
-
-.userImg{
-    width: 160px;
-    height: 160px;
-    
-    
-}
-
-.userImg>img{
-    width: inherit;
-    height: inherit;
-    border-radius: 80px;
-}
-}
-
-.userInfo{
-
-}
-
-.buttonConteiner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.mediaLink{
-width: 50px;
-height: 50px;
-}
