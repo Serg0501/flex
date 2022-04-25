@@ -1,69 +1,37 @@
-
-body{
-    background-color: lightgray;
+.mainConteiner{
+    width: auto;
+    height: auto;
 }
-.cardConteiner{
-    width: 400px;
-    height: 500px;
-    border: 1px solid white;
-    border-radius: 50px;
-    background-color: white;
-    overflow: hidden;
-    margin: auto;/*как отцентровать основной контейнер?????*/
-    position: relative; top: 70px;
-    }
-    
-    .headerImg{
-        height: 30%;
-        background-image: 
-        url('https://st.depositphotos.com/1288156/4466/i/600/depositphotos_44660695-stock-photo-himalaya-mountains-black-and-white.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        object-fit: cover;
-    }
-    
-    .infoContainer{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-       align-items: center;
-       margin-top: -80px;
-    
-    }
-    
-    .userImg{
-        width: 160px;
-        height: 160px;
-        border-radius: 80px;
-        border: 4px solid white;  
-        display: block;
-        
-    }
-    
-    .userImg>img{
-        width: inherit;
-        height: inherit;
-        border-radius: 80px;
-        
-    }
-    
-    
-    .userInfo{
-    text-align: center;
-    }
-    
-    .userInfo>h3{
-    color: rgba(169, 169, 169, 0.425);
-    }
 
-    .buttonConteiner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-    
-    .mediaLink{
-        width: inherit;
-        height: inherit;
-        text-align: center;
-    }
+.headerImg{
+    height: 60%;
+    background-image: 
+    url('https://img.wallpapic.com/i4071-017-11/medium/nacionalnyj-morskoj-park-bunaken-indoneziya-ryby-plyazh-oboi.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.infoContainerImg{
+
+}
+
+.buttonConteiner{
+
+}
+
+.button{
+
+}
+
+.block1{
+
+}
+
+.block2{
+
+}
+
+.block3{
+
+}
