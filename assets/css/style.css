@@ -1,37 +1,85 @@
-.mainConteiner{
-    width: auto;
-    height: auto;
+*{
+    margin: 0px;
+    padding: 0px;
 }
 
-.headerImg{
-    height: 60%;
+.headerInfoContainer{
     background-image: 
-    url('https://img.wallpapic.com/i4071-017-11/medium/nacionalnyj-morskoj-park-bunaken-indoneziya-ryby-plyazh-oboi.jpg');
+    url('https://look.com.ua/pic/201607/2560x1440/look.com.ua-168947.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
-    object-fit: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding:0px;
 }
 
-.infoContainerImg{
-
+.headerInfoContainer h1{
+    font-size: 50px;
+    color: white;
+    margin-top: 20px;
 }
 
-.buttonConteiner{
-
+.headerInfoContainer p{
+    font-size: 28px;
+    color: white;
+    margin-top: 20px;
 }
 
 .button{
+    font-size: 21px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 20px;
 
 }
 
 .block1{
-
+    font-size: 21px;
+    background-color: rgb(0, 110, 255);
+    color: white;
+    text-align: center;
+    padding: 15px;
 }
 
 .block2{
-
+    font-size: 21px;
+    background-color: white;
+    color:rgb(0, 110, 255);
+    text-align: center;
+    padding: 15px;
 }
 
 .block3{
+    display: flex;
+}
 
+.inlignBlock1{
+    font-size: 21px;
+    text-align: center;
+    background-color: rgb(0, 110, 255);
+    color:white;
+    padding: 15px;
+}
+
+.inlignBlock2{
+    font-size: 21px;
+    text-align: center;
+    background-color: white;
+    color:rgb(0, 110, 255);
+    padding: 15px;
+}
+
+.inlignBlock3{
+    font-size: 21px;
+    text-align: center;
+    background-color: rgb(0, 110, 255);
+    color:white;
+    padding: 15px;
 }
