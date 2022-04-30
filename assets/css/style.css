@@ -1,0 +1,100 @@
+:root{
+    --primary-color: white;
+    --second-color: #FA4A0C;
+    --font-size: 16px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.logo{
+    display: inline-block;
+    margin-top: 49.5px;
+    margin-bottom: 40.27px;
+}
+
+.menu{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 64px;
+}
+.innerMenu li{
+    margin-right: 114px;
+    list-style-type: none;
+    display: inline;
+}
+
+.innerMenu a{
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: var(--second-color);
+}
+
+.button{
+    height:68px;
+    width:236px;
+    border-radius:30px;
+    padding: 16px 0px;
+
+   font-family: Montserrat;
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 36px;
+   letter-spacing: 0.1px;
+   text-align: left;
+
+}
+
+.btn1{
+    background-color: var(--second-color);
+    border: none;
+    margin-right: 35px;
+}
+
+.btn2{
+    background: none;
+    border: 1px solid white;
+}
+
+.restApp h3{
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    
+}
+
+.restApp h1{
+    font-family: Poppins;
+font-size: 58px;
+font-weight: 700;
+line-height: 80px;
+letter-spacing: 0.2px;
+text-align: center;
+}
+
+.restApp h4{
+font-family: Montserrat;
+font-size: 24px;
+font-weight: 500;
+line-height: 38px;
+letter-spacing: 0.2px;
+text-align: center;
+}
