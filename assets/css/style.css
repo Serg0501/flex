@@ -46,18 +46,18 @@
 }
 
 .button{
-    height:68px;
-    width:236px;
-    border-radius:30px;
+    width: 236px;
+    height: 68px;
+    border-radius: 30px;
     padding: 16px 0px;
 
-   font-family: Montserrat;
-   font-size: 24px;
-   font-weight: 700;
-   line-height: 36px;
-   letter-spacing: 0.1px;
-   text-align: left;
-
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    color: var(--primary-color);
 }
 
 .btn1{
@@ -69,6 +69,15 @@
 .btn2{
     background: none;
     border: 1px solid white;
+}
+.restApp{
+    background-image: url(/assets/images/1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 0 170px;
 }
 
 .restApp h3{
