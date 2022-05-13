@@ -1,262 +1,368 @@
-/*:root{
-    --primary-color: #000000;
+:root{
+    --primary-color: #17101099;
     --second-color: #FA4A0C;
-    --primary-font-family: 'Akrobat', sans-serif;
-    --second-font-family: 'Zona Pro', sans-serif;
+    --primary-font-family: 'Montserrat', sans-serif;
+    --second-font-family: 'Poppins', sans-serif;
 }
-*/
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-body{
-    width: 1922px;
-    height: 1161px;
-}
-
-.main{
-    width: 1640px;
-    height: 942px;
-    background-color:#FFEA2F;
-    
-}
-
 .header{
-    display: flex;
-    flex-direction: row-reverse;
+margin:0 auto;
+max-width: 1440px;
+height: 830px;
 }
 
-.sectionMenu{
+.logoMenu{
+    height: 155px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 90px;
 }
 
 .innerMenu{
-    width: 643px;
-    height: 25px;
+    width: 560px;
+    height: 66px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
+    font-family: var(--primary-font-family);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    text-align: center;
     list-style-type: none;
-    margin: 48px;
-    height: 95px;
+    text-decoration: none;
+    margin:0 175px 0 465px;
 }
 
-.innerMenu a{
-    font-family: var(--primary-font-family);
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    color: #000000;
+a{
     text-decoration: none;
 }
 
-.innerMenu li>red{
-    font-family: var(--primary-font-family);
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    color: #FF0000;
+.redButton{
+    color: var(--second-color);
 }
 
+.blackButton{
+    color: #252B42;
+}
 
-.rectangleLeng{
-    width: 120px;
-    height: 120px;
-    background-color: #CE0002;
+.restaurantApp{
+    background-image: url(/assets/images/DZ4/1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 619px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
 }
 
-.rectangleLeng>p{
-    width: 31px;
-    height: 28px;
-   font-family: 'Akrobat';
+.restaurantApp h3{
+    width: 196px;
+    height: 36px;
+    font-family: var(--primary-font-family);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    color: #F7F7F7;
+    margin: 80px 0 0 622px;
+}
+
+.restaurantApp h1{ 
+    height: 151.1px;
+    width: 799px;
+    font-family: var(--second-font-family);
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 58px;
+    line-height: 80px;
     text-align: center;
-    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    color: #FFFFFF; 
+    margin: 10px 0 0 319px; 
+}
+
+.restaurantApp h4{
+    width: 368px;
+    height: 19px;
+    font-family: var(--primary-font-family);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #F7F7F7;
+    margin: 15px 0 0 536px;
+}
+
+.buttonHeader{
+    height: 70px;
+    width: 640px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 78px 0 0 454px;
+}
+
+.button1{
+    height: 68px;
+    width: 236px;
+    border-radius: 30px; 
+    font-family: var(--primary-font-family);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.1px;
     color: #FFFFFF;
 }
 
-.logo{
-    width: 786px;
-    height: 733px;
-    background-image: url('/assets/images/DZ5/Frame.png');
-    margin: 0 0 0 0;
+.buttonDelivery{
+    background: var(--second-color);
+    box-shadow: 0px 10px 30px rgba(183, 50, 39, 0.2);
+    border: none;
 }
 
-.logoInfo{
-    width: 459px;
-    height: 90px;
-    font-family: 'Akrobat';
+.buttonMenu{
+    background:none;
+    font-style: normal;
+    color: #FFFFFF;
+    margin-left: 67px;
+}
+
+.createAnAccount{
+    height: 692px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.contentConteiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.title{
+    width: 426px;
+    height: 36px;
+    margin: 56px 0 0 527px; 
+}
+
+.title>h2{
+    font-family: var(--second-font-family);
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 44px;
+    line-height: 36px;
+    letter-spacing: 0.1px;
     color: #000000;
+    opacity: 0.8;
 }
 
-.logoConteiner{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: flex-end;
+.imgConteiner1{
+    background-image: url(/assets/imagesDZ4/2.png);
+    height: 507px;
+    width: 250px;
+    border-radius: 40px;
+    margin: 70px 0 0 174px;
 }
 
-.rectangleInfo{
-    width: 120px;
-    height: 120px;
-    background-color: #CE0002;
-    font-family: 'Akrobat';
+.infoConteiner1>h3{
+    width: 232px;
+    height: 36px;
+    margin: 183px 0 0 287px;
+    font-family: var(--primary-font-family);
     font-style: normal;
-    font-weight: 800;
-    font-size: 22px;
-    line-height: 27px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.1px;  
+    color: #FA4A0C;
+}
+
+.infoConteiner1>h2{
+    width: 561px;
+    height: 114px;
+    margin: 17px 0 0 287px;
+    font-family: var(--primary-font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 57px;
+    letter-spacing: 0.2px;
+    color: #252B42; 
+}
+
+.infoConteiner1>h4{
+    width: 467px;
+    height: 76px;
+    margin: 27px 0 0 287px;
+    font-family: var(--primary-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.2px;
+    color: #737373;
+}
+
+.exploreVarieties{
+height: 703px;
+display: flex;
+flex-direction:row-reverse;
+justify-content: space-between;
+}
+
+.imgConteiner2{
+    background-image: url(/assets/images/DZ4/3.png);
+    width: 250px;
+    height: 489.2px;
+    border-radius: 40px;
+    margin: 29px 197px 0 0;
+}
+
+.infoConteiner2>h3{
+    width: 211px;
+    height: 36px;
+    font-family: var(--primary-font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.1px;
+    color: #FA4A0C;
+    margin: 134px 0 0 175px;
+}
+
+.infoConteiner2>h2{
+    width: 480px;
+    height: 114px;
+    font-family: var(--primary-font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 57px;
+    letter-spacing: 0.2px;
+    color: #252B42;
+    margin: 17px 0 0 175px;
+}
+
+.infoConteiner2>h4{
+    width: 462px;
+    height: 76px;
+    font-family: var(--primary-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.2px;
+    color: #737373;
+    margin: 27px 0 0 175px;
+}
+
+.orderNow{
+    background-image: url(/assets/images/DZ4/4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 516px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.orderNow>h2{
+    width: 235px;
+    height: 57px;
+    font-family: var(--primary-font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 57px;
+    text-align: center;
+    letter-spacing: 0.2px;
     color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 147px 0 0 602.5px;
 }
 
-.rectangleInfo p{
-    width: 101px;
-    height: 54px;
-}
-
-.navigation{
-    width: 282px;
-    height: 942px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.logoToyStream{
-    width: 282px;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.infoConteiner p{
-    width: 1077px;
-    height: 255px;
-    font-family: 'Zona Pro';
+.orderNow>h4{
+    width: 840px;
+    height: 38px;
+    font-family: var(--primary-font-family);
     font-style: normal;
-    font-weight: 800;
-    font-size: 72px;
-    line-height: 85px;
-    text-transform: uppercase;
-    color:#000000;
-    margin: 0 0 0 88px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    margin: 20px 0 0 300px;
 }
 
-.socNetworkConteiner{
-    width: 32px;
-    height: 282px;
+.buttonFooter{
+    width: 320px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0 0 0 92px;
+    justify-content: space-between;/*не раздвигаются*/
+    margin: 59px 0 0 554.5px;
 }
 
-.emptySection{
-    width: 1922px;
-    height: 77px;
+.button2{
+    height: 64px;
+    border-radius: 10px;
+    font-family: var(--primary-font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+}
+
+.buttonPlayStore{
+    width: 142px;
+    background-color: var(--second-color);
+    border: none;
+}
+
+.buttonAppStore{
+    width: 172px;
+    background-color: var(--primary-color);
+    margin-left: 10px;
 }
 
 .footer{
-    width: 1922px;
-    height: 54px;
+    height: 237px;
+    margin: 76.9px 0 0 115px;
+}
+
+.footerConteiner{
+    width: 1210px;
+    height: 133px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
-.footerInfo{
-    width: 105px;
-    height: 20px;
-    font-family: 'Akrobat';
+.footer>p{
+    height: 18px;
+    width: 190px;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    color: #7E7E7E;
-    margin: 18px 0 0 27px;
-}
-
-.footerInnerMenu{
-    width: 516px;
-    height: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-family: 'Akrobat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    color: #7E7E7E;
-    list-style-type: none;
-    margin: 18px 0 0 542px;
-}
-
-.footerInnerMenu a{
-    text-decoration: none;
-}
-
-.footerSocNetworkConteiner{
-    width: 197.5px;
-    height: 25px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 15px 25.2px 0 0;
-}
-
-@font-face {
-    font-family: 'Akrobat';
-    src: url('Akrobat-SemiBold.eot');
-    src: local('Akrobat SemiBold'), local('Akrobat-SemiBold'),
-        url('Akrobat-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('Akrobat-SemiBold.woff2') format('woff2'),
-        url('Akrobat-SemiBold.woff') format('woff'),
-        url('Akrobat-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Akrobat';
-    src: url('Akrobat-ExtraBold.eot');
-    src: local('Akrobat ExtraBold'), local('Akrobat-ExtraBold'),
-        url('Akrobat-ExtraBold.eot?#iefix') format('embedded-opentype'),
-        url('Akrobat-ExtraBold.woff2') format('woff2'),
-        url('Akrobat-ExtraBold.woff') format('woff'),
-        url('Akrobat-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Akrobat';
-    src: url('Akrobat-Regular.eot');
-    src: local('Akrobat Regular'), local('Akrobat-Regular'),
-        url('Akrobat-Regular.eot?#iefix') format('embedded-opentype'),
-        url('Akrobat-Regular.woff2') format('woff2'),
-        url('Akrobat-Regular.woff') format('woff'),
-        url('Akrobat-Regular.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: right;
+    letter-spacing: 0.1px;
+    color: #5C5C5C;
 }
