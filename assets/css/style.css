@@ -11,294 +11,34 @@
     box-sizing: border-box;
 }
 
-body{
-    width: 1922px;
-    height: 1161px;
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
 }
 
-.main{
-    width: 1640px;
-    height: 942px;
-    background-color:#FFEA2F;
-    
+body {
+    font-size: 48px;
 }
 
-.header{
-    display: flex;
-    flex-direction: row-reverse;
+thead  {
+    color: white;
+    background-color: rgb(4, 57, 39);
 }
 
-.sectionMenu{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+tbody tr:nth-child(odd) td:nth-child(odd) {
+  background-color: darkturquoise;
+}
+tbody tr:nth-child(odd) td:nth-child(even) {
+    background-color: paleturquoise;
+}
+tbody tr:nth-child(even) td:nth-child(odd) {
+    background-color: paleturquoise;
+}
+tbody tr:nth-child(even) td:nth-child(even) {
+    background-color: white;
 }
 
-.innerMenu{
-    width: 643px;
-    height: 25px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-    list-style-type: none;
-    margin: 48px;
-    height: 95px;
-}
+tfoot {
+    background-color: gray;
 
-.innerMenu a{
-    font-family: 'Akrobat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    color: #000000;
-    text-decoration: none;
-}
-
-.innerMenu a:hover{
-    color: #FE0002; 
-}
-
-.innerMenu a:active{
-    color: #A60002;
-}
-
-.rectangleLeng{
-    width: 120px;
-    height: 120px;
-    background-color: #CE0002;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-.rectangleLeng>p{
-    width: 31px;
-    height: 28px;
-    font-family: 'Akrobat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 25px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFFFFF;
-}
-
-.rectangleLeng:hover{
-    background-color: #FE0002; 
-}
-
-.rectangleLeng:active{
-    background-color: #A60002;
-}
-
-.logo{
-    width: 786px;
-    height: 733px;
-    background-image: url('/assets/images/DZ5/Frame.png');
-    margin: -20px 40px 0px 0;
-}
-
-.logoInfo{
-    width: 459px;
-    height: 90px;
-    font-family: 'Akrobat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 30px;
-    color: #000000;
-    margin: 0 234px 127px 0;
-}
-
-.logoConteiner{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: flex-end;
-    
-}
-
-.rectangleInfo{
-    width: 120px;
-    height: 120px;
-    background-color: #CE0002;
-    font-family: 'Akrobat';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 22px;
-    line-height: 27px;
-    color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0 112px -70px;
-}
-
-.rectangleInfo p{
-    width: 101px;
-    height: 54px;
-}
-
-.rectangleInfo:hover{
-    background-color: #FE0002; 
-}
-
-.rectangleInfo:active{
-    background-color: #A60002;
-}
-
-.navigation{
-    width: 282px;
-    height: 942px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.logoToyStream{
-    width: 282px;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.infoConteiner p{
-    width: 1077px;
-    height: 255px;
-    font-family: 'Zona Pro';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 72px;
-    line-height: 85px;
-    text-transform: uppercase;
-    color:#000000;
-    margin: 0 0 0 88px;
-}
-
-.socNetworkConteiner{
-    width: 32px;
-    height: 282px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0 0 0 92px;
-}
-
-.emptySection{
-    width: 1922px;
-    height: 77px;
-}
-
-.footer{
-    width: 1922px;
-    height: 54px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.footerInfo{
-    width: 109px;
-    height: 20px;
-    font-family: 'Akrobat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    color: #7E7E7E;
-    margin: 18px 0 0 27px;
-}
-
-.footerInnerMenu{
-    width: 516px;
-    height: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-family: 'Akrobat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    color: #7E7E7E;
-    list-style-type: none;
-    margin: 18px 0 0 542px;
-}
-
-.footerInnerMenu a{
-    text-decoration: none;
-}
-
-.footerInnerMenu a:hover{
-    color: #FE0002; 
-}
-
-.footerInnerMenu a:active{
-    color: #A60002;
-}
-
-.footerSocNetworkConteiner{
-    width: 197.5px;
-    height: 25px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 15px 25.2px 0 0;
-}
-
-@font-face {
-    font-family: 'Akrobat';
-    src: url('Akrobat-SemiBold.eot');
-    src: local('Akrobat SemiBold'), local('Akrobat-SemiBold'),
-        url('Akrobat-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('Akrobat-SemiBold.woff2') format('woff2'),
-        url('Akrobat-SemiBold.woff') format('woff'),
-        url('Akrobat-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Akrobat';
-    src: url('Akrobat-ExtraBold.eot');
-    src: local('Akrobat ExtraBold'), local('Akrobat-ExtraBold'),
-        url('Akrobat-ExtraBold.eot?#iefix') format('embedded-opentype'),
-        url('Akrobat-ExtraBold.woff2') format('woff2'),
-        url('Akrobat-ExtraBold.woff') format('woff'),
-        url('Akrobat-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Akrobat';
-    src: url('Akrobat-Regular.eot');
-    src: local('Akrobat Regular'), local('Akrobat-Regular'),
-        url('Akrobat-Regular.eot?#iefix') format('embedded-opentype'),
-        url('Akrobat-Regular.woff2') format('woff2'),
-        url('Akrobat-Regular.woff') format('woff'),
-        url('Akrobat-Regular.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Zona Pro';
-    src: local('Zona Pro ExtraBold'), local('Zona-Pro-ExtraBold'),
-        url('ZonaPro-ExtraBold.woff2') format('woff2'),
-        url('ZonaPro-ExtraBold.woff') format('woff'),
-        url('ZonaPro-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-  }
-
-  @media (max-width:375px){
-   
-  }
+      }
