@@ -11,34 +11,51 @@
     box-sizing: border-box;
 }
 
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
+.container {
+    height: 900px;
+    width: 900px;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.card {
+    height: 500px;
+    width: 300px;
+    position: relative;
 }
 
-body {
-    font-size: 48px;
+.part1, .part2 {
+    height: 250px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 1s;
+
 }
 
-thead  {
-    color: white;
-    background-color: rgb(4, 57, 39);
+.part1 {
+    background-color: grey;
+    z-index: 2;
+    transform: translate(0, +50%);
+}
+.content {
+    text-align: center;
+}
+.part2 {
+    background-color: aliceblue;
+    z-index: 1;
+    transform: translate(0, -50%);
 }
 
-tbody tr:nth-child(odd) td:nth-child(odd) {
-  background-color: darkturquoise;
-}
-tbody tr:nth-child(odd) td:nth-child(even) {
-    background-color: paleturquoise;
-}
-tbody tr:nth-child(even) td:nth-child(odd) {
-    background-color: paleturquoise;
-}
-tbody tr:nth-child(even) td:nth-child(even) {
-    background-color: white;
+.card:hover .part1{
+    background-color: brown;
+    transform: translate(0, 0);
 }
 
-tfoot {
-    background-color: gray;
-
-      }
+.card:hover .part2{
+    transform: translate(0, 0);
+}
