@@ -1,311 +1,226 @@
-//alert ("Helo, Word!");
-
-console.log("Hello, Stas!!");
-console.log("Hello","JS Developer","!!!!");
-
+// if-else
 /*
-//переменные style camelCase
-
-//объявление переменных
-let x;
-let y;
-let userName;
-let userColorAvatarBG;
-let a,b,c;
-//инифиализация переменных
-x = 5;
-y = -100;
-a = 3.14;
-b = 0.00005;
-userName = "Stas";
-userColorAvatarBG = "red";
-
-console.log(x);
-console.log(y,a,b);
-console.log("User name is",userName);
-console.log('A = ',a, 'and B = ',b);
-
-//объявление с иницмализацией
-let d = 200;
-let name1 = "Tom Fox";
-console.log(name1);
-
-//Что мы можем положить в (контейнер) переменную, тип
-let x2;
-x2 = 100;
-console.log(x2);
-x2 = -3;
-console.log(x2);
-x2 = "hello";
-console.log(x2);
-x2 = 'Stas';
-console.log(x2);
-x2 = true; //логитесчкий тип бывает true и false 
-console.log(x2);
-
-//можем ложить контейнеры один в один
-console.log('x=',x);
-console.log('y=',y);
-x = y;
-console.log('x=',x);
-console.log('y=',y);
-
-// операции
-x = 10;
-console.log('x=',x);
-x = x+5;
-console.log('x=',x);
-x = x-5;
-console.log('x=',x);
-x = x*5;
-console.log('x=',x);
-x = x/5;
-
-y = 2;
-x = 10;
-
-console.log('x=',x);
-x = x+y;
-console.log('x=',x);
-x = x-y;
-console.log('x=',x);
-x = x*y;
-console.log('x=',x);
-x = x/y;
-
-let a1 = 10;
-let a2 = 0, a3 = 'Stas';
-let a4 = false, a5 = -2;
-
-let result;
-result = a1+a5;
-console.log ('result=',result);
-result = a1*a5;
-console.log ('result=',result);
-result = a1-a5;
-console.log ('result=',result);
-result = result*2;
-console.log (result);
-
-result = 500 - result;
-console.log (result);
-*/
-
-//константа (постоянная) - большие буквы с нижним подчеркиванием
-/*
-const COLOR_RED = "#FF0000";
-const COLOR_GREEN = "#00FF00";
-const COLOR_BLUE = "#0000FF";
-const MAX_QUERIES = 3;
-
-let x = 100;
-x = x + MAX_QUERIES;
-console.log(x);
-*/
-
-
-//операции (+ - * /) - краткие записи
-/*
-let a1 = 200, a2 = 100, result;
-a1 +=5; //a1 = a1 +5;
-a1 -+5; //a1 = a1 -5;
-a1 *=5; //a1 = a1 *5;
-a1 /=5; //a1 = a1 /5;
-
-a2 +=a1 //a2 = a2 + a1;
-a2 -=a1 //a2 = a2 - a1;
-a2 *=a1 //a2 = a2 * a1;
-a2 /=a1 //a2 = a2 / a1;
-*/
-
-// операция инкремент / декремент 
-/*
-x = 10;
-x++ //x = x+1; или ++x
-x-- //x = x-1; или --x
-*/
-
-// возведение в степень
-/*
-result = 5 ** 2;
-console.log (result);
-result = 5 ** 3;
-console.log (result);
-result = 5 ** (1/2);
-console.log (result);
-*/
-
-/*1 Создайте переменные a=10 и b=20. Отнимите от a переменную b и  
-результат присвойте переменной c. Затем создайте переменную d,  
-присвойте ей значение c. Сложите переменные c и d,  
-а результат запишите в переменную result. 
- 
-2 Переделайте этот код так, чтобы в нем использовались операции  
-+=, -=, *=, /=, ++, - - 
-let num = 100; 
-num = num + 7; 
-num = num - 18; 
-num = num * 10; 
-num = num / 15; 
-num = num + 1; 
-num = num - 1; 
- 
-3 Спросите у пользователя число. Возведите это число в квадрат.
-let r = prompt('Введи число');
-
-let a = 10, b = 20; c, d, result;
-c = a - b;
-d = c;
-result = c + d;
-console.log (result);
-
-let num = 100; 
-num += 7;
-num -= 18; 
-num *= 10; 
-num /= 15; 
-num += 1; //num++
-num -= 1; //num--
-console.log (num);
-
-let r = prompt('20');    // - РАЗОБРАТЬ!!!!
-result = r ** 2;
-console.log (result);
-*/
-
-/*
-//4 Задание вычислите площадь прямоугольника по введеным данным
-// S = a * b;
-let a = 5, b = 7, S;
-S=a*b;
-console.log ('Square is',S,'m');
-
-//5 Задание: перевести мм в см (спросить мм в ответ дать см)
-let uderValueMM, userVAluemCM;
-uderValueMM=1000;
-userVAluemCM = uderValueMM/10;
-console.log ('uderValueMM',"mm=",userVAluemCM,"cm");
-*/
-
-//Условные операторы
-// >   <   >=   <=   !=   ===включая проверку типа
-/*
-let a,b;
-a = 5;
-b = 7;
-
-console.log (a>b);
-console.log (a<b);
-console.log (a==b);
-console.log (a!=b);
-console.log (a===b);
-*/
-
-//Условные оператор if
-/*
-if(условие){
-    //набор действий если условия выполняет
-}
-*/
-/*
-let userAge = prompt ('Введите свой возраст'); - prompt - это окно для ввода значения
-if (userAge >= 18) {
-    alert ('Вы-совершенолетний');
-}
-*/
-
-/* IF + ELSE
 if (условие){
-    список действий при выполнении условия
-} else {
-    список действий при НЕ выполнении условия
+    действие, если условие1 выполняется
+} else if(условие2){
+
+
+    //если четное то *2, нечетное/2
 }
-let userAge = prompt ('Введите свой возраст');
-if (userAge >= 18) {
-    alert ('Вы-совершенолетний');
+let value =100;
+if(value%2==0){
+    value=value*2;  // value*=2;
+} else{
+    value/=2;
+}
+
+// если четное и больше 100 то *2, нечетное/2
+
+if(value%2 ==0 && value <=100){
+    value = value*2
 }else{
-    alert ('Вы-несовершенолетний');
+    value/=2;
 }
+//если число меньше 10 вычесть 1 из него, если от 10 до 100 вычесть 5,
+//если больше 100 поделить на 2
 
-//ПРИМЕР
-let userNumber = prompt ('Введите свой возраст');
-if (userNumber >= 10) {
-    alert ('Больше');
+if (value < 10){
+    value=value-1;
+}else if ( value>=10 && value<100){
+    value= value-5;
+}else if(value >=100){
+    value = value/2;
 }else{
-    alert ('Меньше');
+    console.log('Error');
 }
-*/
+// или
 
-//проверить число положительное, отризацтельное или ноль
-/*
-let xCon = prompt ('Enter x');
-if (xCon>0) {
-    console.log('положительное')
-} else if (xCon<0) {
-    console.log('отрицательное')
-} else {
-    console.log('это ноль')
-}
-*/
-
-//тернарный оператор ?
-//let result = условие? значение1 : значение2;
-/*
-let userAge = 20;
-let res = (userAge >=18) ? 'совершенолетний': 'несовершолетний';
-console.log(res);
-*/
-
-
-//оператор остаток от деления % - используется для чисел четное или нечетное число
-/*
-console.log(5 % 2);
-
-let xCon = prompt ('Четное/Нечетное');
-if (xCon%2 !=0) {
-    alert('нечетное')
-} else {
-    alert('четное')
+if (value < 10){
+    value=value-1;
+}else if(value >=100){
+    value = value/2;
+}else{
+    value= value-5;
 }
 
-let res = (xCon%2 ==0) ? 'четное' : 'нечетное';
-console.log(rel);
-*/
-
-
-// нечколько условий
-// && and - и || or - или
+//for
 /*
-// пример. поступаемое число положительное и больше 10
-if (value>0 && value>10){}
-// пример. поступаемое число положительное и равно 0
-if (value>0 || value==0){}
-
-if (weekDay == 'Sunday' && isWorkink == true {console.log ('yes');}
-*/
-
-//циклы for, while
-/*
-for (начальное условие; шаг; конечное условие){
+for(начальное условие; конечное условие;шаг){
     действие
 }
 */
-
-// Задача. посчитать сумму чисел от 1 до 10
 /*
-let start = 1, end = 10, result = 0;
-for (start = 1; start <= end; start = start+1) {
-    result = result + start;
+let num = 1;
+for(num=1; num<=100; num=num+1;){
+    result1=result1+num;
+}
+
+//найти произведение чисел от 2 до 8
+
+result1=1;
+for(num=2;num<=8;num++){
+    result=result*num;
 }
 console.log(result);
-*/
 
-//посчитать сумму чисел от 10 до 1
+//найти сумму нечетных чисел от 10 до 50
+
+result=0;
+
+//1
+
+for(num=10; num<=50; num++){
+    if(num%2 ==1);{
+        result=result+num;
+    }
+}
+
+//2
+
+for(num=11; num<=50; num=num+1){
+        result=result+num;
+}
+
+*/
 /*
-let i;
-for (i=10; i>=1; i--){
-    console.log(i)
+while(конечное условие){
+    действие
+}
+*/
+/*
+//сумма чисел от 1 до 10
+//for
+let n, res=0;
+
+for(n=1; n<=10; n++){
+    res=res+n;
+}
+console.log('FOR:',res);
+//while
+n=1, res=0;
+while(n<=10){
+    res=res+n;
+    n++;
+}
+
+//вывести числа от 5 до 0
+
+n=5;
+while(n>=0){
+    console.log(n);
+    n=n-1;
+}
+*/
+//вывести числа от 5 до 0 в квадрате
+/*
+n=5;
+while(n>=0){
+    n=n^2; //n=n*n
+    console.log(n);
+    n=n-1; //n-=n
+}
+*/
+// задача цыклом. выйти когда сумма чисел привысит 100 и на каком числе
+/*
+let n = 1, sum = 0;
+while(true) {
+    sum +=n
+    if (sum > 100) break;
+    n++;
+}
+console.log(n);
+console.log(sum);
+
+sum=0;
+for(n=1;n++;) {
+    sum +=n
+    if (sum > 100) break;
+    
+}
+console.log(n);
+console.log(sum);
+*/
+/*
+//бесконечные цыклы
+//while (true){}
+//for( ; ; ){}
+//while(false){}
+*/
+/*
+n=10000;
+let x1=1, x2=2, x3=3;
+console.log('Result:',x1,x2,x3);
+console.log('Result: x1,x2,x3 ');
+console.log(`Result: ${x1} ${x2} ${x3}`);
+*/
+/*
+let userValue=prompt('Введите номер месяца');
+let result;
+if(userValue ==1){
+    result="Январь";
+} else if(userValue == 2){
+    result="Февраль";
+} else if(userValue == 3){
+    result="Март";
+} else if(userValue == 4){
+    result="Апрель";
+} else if(userValue == 5{
+    result="Май";
+} else{
+    result="Нет такого месяца";
+}
+// .....
+
+switch(userValue){
+    case 1: result = "Январь"; break;
+    case 2: result = "Февраль"; break;
+    case 3: result = "Март"; break;
+    ///.....
+    default: result="Нет такого месяца"; dreak;
 }
 */
 
-//2 УРОК ------ ФУНКЦИИ И ЦИКЛЫ
+///Задача
+
+// Попросить пользователя ответить  на вопрос 2+2
+/*
+
+let x = prompt('2+2=');
+if( x==4){
+    alert="Правильно"
+}else{
+    alert="Подумай еще"
+}
+
+*/
+
+// Попросить пользователя ответить  на вопрос 2+2, спрашить пока не ответит правильно
+/*
+while(true){
+    answer = prompt("2+2=");
+    if(answer==result){
+        alert("Bingo!");
+        break;
+    }
+    alert('Sorry Wrong');
+}
+*/
+/*
+do{
+    answer = promt(2+2=);
+} while(answer == result);
+*/
+//3 - посчитать сумму нечетных чисел от 1 до 20 используя for / while
+/*
+let number = 1, limit = 20, res = 0;
+
+for(number=1; number<= limit; number=number+2){
+    res=res+number;
+}
+
+number = 1, res =0;
+while(number <= limit){
+    res = res + number;
+    number = number + 2;
+}
+*/
