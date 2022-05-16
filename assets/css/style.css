@@ -42,13 +42,11 @@ header {
 }
 
 .innerMenu{
-    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
     list-style-type: none;
-    
 }
 
 .innerMenu a{
@@ -98,6 +96,43 @@ header {
     background-color: #A60002;
 }
 
+@media (max-width:1026px) {
+    .wrapper {
+        max-width: 1026px;
+        background: linear-gradient(to right,#fff 97px,#FFEE2F 97px);
+    }
+
+    .headerLogo{
+        margin: 34px 0 0 140px;
+    }
+
+    .innerMenu{
+        display: none;
+    }
+}
+@media (max-width:600px) {
+    .wrapper {
+        max-width: 600px;
+        background: linear-gradient(to right,#F1FAFF, 70px,#FFEA2F 70px);
+    }
+    header {
+        height: 98px;
+    }
+    
+    .sectionMenu{
+        padding: 152px 0px 0px 100px;/*??????*/
+    }
+
+    .innerMenu{
+        font-size: 32px;
+    }
+
+    .rectangleLeng{
+        width: 98px;
+        height: 98px;
+    }
+}
+
 main {
     height: 822px;
     display: flex;
@@ -125,8 +160,7 @@ main {
     font-size: 72px;
     line-height: 85px;
     text-transform: uppercase;
-    color:#000000;
-    
+    color:#000000; 
 }
 
 .information{
@@ -193,14 +227,132 @@ main {
     margin: 49px 40px 0 0;
 }
 
+@media (max-width:1026px){
+    main{
+        height: auto;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .navigation{
+        margin-top: 64px;
+        margin-left: 47px;
+        justify-content: flex-start;
+        width: 84.5%;
+        height: auto;
+    }
+
+    .infoConteiner1{
+        width: auto;
+        max-height: 425px;
+        margin: 0px 0px 25px 0px;
+    }
+
+    .information{
+        margin: 0px 0px 0px 0px;
+    }
+
+    .socNetworkConteiner{
+        margin: 0px 65px 0px 0px;
+        position: absolute;
+        top: 190px;
+    }
+
+    .mb-rb { /*!!!!!!!!!!!!!!*/
+        margin: 0px 65px 0px 0px;
+    }
+
+    .infoConteiner2{
+        margin: 15px 0px 0px 0px;
+    }
+
+    .logoUnikorn{
+        align-self: flex-end;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        margin-top: 0px;
+        width: 76%;
+    }
+}
+
+
+@media (max-width:600px){
+    main{
+        flex-direction: column;
+    }
+
+    .navigation{
+        height: 826px;
+        margin-top: 49px;
+        margin-left: 14px;
+        justify-content: space-between;
+    }
+
+    .infoConteiner1{
+        font-size: 32px;
+        line-height: 38px;
+        width: 352px;
+        margin: 0px;
+    }
+
+    .information{
+        flex-direction: column;
+        width: 345px;
+        margin-bottom: 39px;
+    }
+
+    .socNetworkConteiner{
+        display: none;
+    }
+
+    .mb-rb {
+        width: 120px;
+        height: 120px;
+        margin: 0px;
+    }
+
+    .infoConteiner2{
+        font-size: 16px;
+        line-height: 20px;
+        width: 345px;
+        margin: 25px 0px 0px 0px;
+    }
+
+    .logoUnikorn{
+        width: 345px;
+        height: 322px;
+        margin: 0px;
+        position: absolute;
+        top: 240px;
+        right: 15px;
+        background-image: url(/assets/images/DZ5/Frame\ M.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+}
+
 .emptySection{
-    width: 1922px;
     height: 77px;
     background: #FAFAFA;
 }
 
+@media (max-width:1026px){
+    .emptySection{
+        height: 51px;
+        background: #FFFFFF;
+    }
+}
+
+@media (max-width:600px){
+    .emptySection{
+        height: 49px;
+        background: #F1FAFF;
+    }
+}
+
 .footer{
-    width: 1922px;
     height: 54px;
     background: #EFEFEF;
     display: flex;
@@ -256,6 +408,24 @@ main {
     flex-direction: row;
     justify-content: space-between;
     margin: 15px 25.2px 0 0;
+}
+
+@media (max-width:1026px){
+    .footerInnerMenu{
+        margin-right: 10px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    
+}
+
+@media (max-width:600px){
+    .footer {
+        padding: 0px 16px 0px 20px;
+    }
+    .footerInnerMenu {
+        display: none;
+    }
 }
 
 @font-face {
