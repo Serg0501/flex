@@ -1,10 +1,4 @@
-/*:root{
-    --primary-color: #000000;
-    --second-color: #FA4A0C;
-    --primary-font-family: 'Akrobat', sans-serif;
-    --second-font-family: 'Zona Pro', sans-serif;
-}
-*/
+
 *{
     margin: 0px;
     padding: 0px;
@@ -103,7 +97,7 @@ header {
     }
 
     .headerLogo{
-        margin: 34px 0 0 140px;
+        padding: 0 0 0 31px;
     }
 
     .innerMenu{
@@ -119,12 +113,12 @@ header {
         height: 98px;
     }
     
-    .sectionMenu{
-        padding: 152px 0px 0px 100px;/*??????*/
+    .headerLogo{
+        padding: 15px 0 0 140px;
     }
 
     .innerMenu{
-        font-size: 32px;
+        display: none;
     }
 
     .rectangleLeng{
@@ -235,46 +229,32 @@ main {
     }
 
     .navigation{
-        margin-top: 64px;
-        margin-left: 47px;
-        justify-content: flex-start;
-        width: 84.5%;
-        height: auto;
+        margin: 184px 0 0 50px;
     }
 
     .infoConteiner1{
         width: auto;
         max-height: 425px;
-        margin: 0px 0px 25px 0px;
+        margin: 184px 0 0 47px;
     }
 
     .information{
-        margin: 0px 0px 0px 0px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
     }
 
     .socNetworkConteiner{
-        margin: 0px 65px 0px 0px;
-        position: absolute;
-        top: 190px;
-    }
-
-    .mb-rb { /*!!!!!!!!!!!!!!*/
-        margin: 0px 65px 0px 0px;
-    }
-
-    .infoConteiner2{
-        margin: 15px 0px 0px 0px;
+        margin: 722px 0 0 0;
     }
 
     .logoUnikorn{
+        width: 786px;
+        height: 733px;
         align-self: flex-end;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        margin-top: 0px;
-        width: 76%;
+        margin: 0 49px 49px 0;
     }
 }
-
 
 @media (max-width:600px){
     main{
@@ -283,8 +263,6 @@ main {
 
     .navigation{
         height: 826px;
-        margin-top: 49px;
-        margin-left: 14px;
         justify-content: space-between;
     }
 
@@ -298,17 +276,11 @@ main {
     .information{
         flex-direction: column;
         width: 345px;
-        margin-bottom: 39px;
+        margin: 0 0 0 -25px;
     }
 
     .socNetworkConteiner{
         display: none;
-    }
-
-    .mb-rb {
-        width: 120px;
-        height: 120px;
-        margin: 0px;
     }
 
     .infoConteiner2{
@@ -321,16 +293,19 @@ main {
     .logoUnikorn{
         width: 345px;
         height: 322px;
-        margin: 0px;
+        margin-top: 100px;
         position: absolute;
-        top: 240px;
+        top: 338px;
         right: 15px;
         background-image: url(/assets/images/DZ5/Frame\ M.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
-    
+
+    .rectangleInfo{
+        margin: 0px;
+    }
 }
 
 .emptySection{
@@ -415,17 +390,19 @@ main {
         margin-right: 10px;
         font-size: 14px;
         line-height: 17px;
-    }
-    
+    } 
+
 }
 
 @media (max-width:600px){
     .footer {
         padding: 0px 16px 0px 20px;
     }
+    
     .footerInnerMenu {
         display: none;
     }
+
 }
 
 @font-face {
