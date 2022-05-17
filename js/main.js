@@ -1,133 +1,57 @@
-///Функции
+//1. Определите переменные со значениями 11, true, "java script", "100" и выведите их в консоль
 /*
-function add(a,b){
-    let result = Number(a)+Number(b);
-    return result;
-}
+let a,b,c,d 
+a = 11
+b = true
+c = "java script"
+d = "100"
+console.log (a,b,c,d)
+ */
 
-function sub(a,b){
-    let result = a-b;
-    return result;
-}
+//2. Создайте переменные greeting со значением'Hello, ' и userName. Спросите имя пользователя и занесите данное значение в переменную userName. С помощью диалога выведите сообщение с приветствием. Например, 'Hello, Vasya!'.
 
-function mult(a,b){
-    let result = a*b;
-    return result;
-}
-
-function division(a,b){
-    let result = a/b;
-    return result;
-}
-
-function print(value){
-    console.log(value);
-}
-
-let val1,val2;
-val1=Number(prompt('Enter value1'));
-val2=Number(prompt('Enter value2'));
-console.log('+',add(val1,val2));
-console.log('-',sub(val1,val2));
-console.log('*',mult(val1,val2));
-console.log('/',division(val1,val2));
+/*
+let greeting = 'Hello, '
+let userName = prompt('Введи Ваше имя:')
+result=greeting+userName
+console.log (result)
 */
-// вывести сообщение сколько раз сколько задает пользователь
-/*
-function repeatMsg(msg){
-    while(n>0){
-        console.log(msg);
-        msg--;
-    }
-}
 
-*/
+//3. Определите в какую четверть часа попадает ввыденное количество минут пользователем (например, 40 минут - 3-я четверть часа)
+
 /*
-function repeatMsg(msg,n){
-    let i;
-    for(i=1;i<=msg;i++){
-        console.log('hello');
-    }
-}
-repeatMsg(5);
-*/
-//вывести рисунок исп функцию
-/*
-*****
-****
-***
-**
-*
-*/
-/*
-function printStars(symbolStr, countMax){
-    let i, str="";
-    for(i=1;i<=countMax;i++){
-        str=str+symbolStr;
-    }
-    return str;
-    //console.log(str); //printSymbols("*",5);
-    //return str; // вызов console.log(printSymbols("*",5))
-}
+let userValue=prompt('Введите количество минут');
 let result;
-result=printSymbols("*",5);
-console.log(result);
-result=printSymbols("*",15);
-console.log(result);
-result=printSymbols("$",12);
-console.log(result);
-
+if(userValue >0 && userValue<=15){
+    result="1я четверть часа";
+} else if(userValue >15 && userValue<=30){
+    result="2я четверть часа";
+} else if(userValue >30 && userValue<=45){
+    result="3я четверть часа";
+} else if(userValue >45 && userValue<=60){
+    result="4я четверть часа";
+} else if(userValue >60){
+    result="такого значения НЕТ!";
+}
+console.log (result)
 */
 
-//вывести все числа кратные 5 в указанном диапазоне пользователем
+//4. Вывод чисел от 10 до 50, которые кратны 5
+
 /*
-function task1(minLimit,maxLimit){
-    let num;
-    for(num=minLimit; num<=maxLimit;num++){
-        if(num %5==0){
-            console.log(num);
-        }
-    }
-}
-
-function task1_2(minLimit,maxLimit){
-    for(minLimit; minLimit<=maxLimit;minLimit++){
-        if(minLimit %5==0){
-            console.log(minLimit);
-        }
-    }
+let n=10;
+while(n<=50){
+    console.log(n);
+    n=n+5;
 }
 */
 
-//сделать функцию которая проверяет сумму 2х указанных чисел
-//*1
-/*
-function task2(number1, number2, answer){
-    if(number1+number2==answer){
-        return true;
-    }
-    return false;
-}
+//5. Найти произведение чисел в пределах от lim1 до lim2 (например, если lim1=5 и lim2=12 то это произведение чисел от 5 до 12).
 
-let answer = prompt('2+2=?');
-let res;
-res=task2(2,2,answer);
-if(res==true){
-    console.log('yes');
-}else{
-    console.log('no');
+let lim1=prompt('Введите начальное значение'); lim2=prompt('Введите конечное значение'); res=0
+for(n=lim1; n<=lim2; n=n+n){
+    res=res*n;
 }
-*/
-//*2
-/*
-function task2_2(number1, number2, answer){
-    if(number1+number2==answer){
-        console.log('yes');
-    }
-    console.log('no');
-}
+console.log('res')
 
-answer = prompt('2+2=?');
-task2_2(2,2,answer);
 
-*/
