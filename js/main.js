@@ -1,71 +1,76 @@
-//вывести числа от 5 до1
+//Массивы
 
+//10,120,6,320
+//prod1.prod2....5
+//totalSum
+
+//1
 /*
-let num1 = 5, num2 = 1;
-for(num1; num1>=num2; num1--){
-    console.log(num1);
-}
+let array0=[];
+let array1 = [100, 120, 6, 320, 15];
 */
 /*
-let num1 = 5, num2 = 1;
-while(num1>=num2){
-    console.log(num1);
-    num1--;
-}
+//2
+let array2 = new Array();
 */
 /*
-let num1 = 5, num2 = 1;
-while(true){
-    console.log(num1);
-    num1--;
-    if (num1<num2){
-        break
-    }
+let size = array1.length;
+let i;
+*/
+//задание. вывести массив
+//1
+/*
+console.log(array1);
+*/
+//
+/*
+console.log(array1[0]);
+console.log(array1[1]);
+console.log(array1[2]);
+console.log(array1[3]);
+*/
+//2
+//i - index 0...4
+/*
+for(i=0; i < array1.length; i++){
+    console.log(array1[i]);
 }
 */
+
+//объявить массив из 5 чисел и увеличить каждое в 2 раза
 /*
-while(true){
-    console.log(num1);
-    num1--;
-    if (num1>=num2) continue;
-    break;
+let array3 = [10,20,30,40,50];
+for(i=0; i<array3.length; i++){
+    array3[i] *= 2; //array3[i] = array3[i] * 2;
 }
+console.log('array 3task:', array3);
 */
-//сделать бесконечный вызов меню, пока пользователь сам не решит выйти(exit 0)
-
-//Юрка Кр
+//задание
+//каждое число увеличить на 100
 /*
-function dropMenu(menu=prompt('1=з№1 2=з№2 3=з№3 4=з№4')){
-    switch(menu){
-        case '0':console.log('Exit'); break;
-        case '1':console.log('Hello'); dropMenu(); break;
-        case '2':console.log('Hello'); dropMenu();break;
-        case '3':console.log('Hello'); dropMenu();break;
-        case '4':console.log('Hello'); dropMenu();break;
-        default:alert('Нет такого значения:-/');dropMenu();
-    }
+for(i=0; i<array3.length; i++){
+    array3[i] +=100; //array3[i] = array3[i] * 2;
 }
-dropMenu();
+console.log('array 3task:', array3);
 */
-//Юлия ФК
 
+// Задача вывести массив наоборот (с последнего к первому)
+
+for(i = array3.length-1; i>=0; i--){
+    console.log(array3[i]);
+    //console.log(i); вывод индекса
+
+}
+
+// Задача вывести элементы с нечетными индексами
+for(i=1; i<array3.length; i = i + 2){
+    console.log(array3[i]);
+}
+// Задача вывести элементы с четными индексами
+for(i=0; i<array3.length; i = i + 2){
+    console.log(array3[i]);
+}
 /*
-let ch = +prompt('task?');  //1-4
-let flag = true, r =0;
-
-while(flag){
-
-switch(ch){
-case 1: {f1(); break;}
-case 2: {f2(1,10); break;}
-case 3: {f3(5); break;}
-case 4: {f4(1,10,12); break;}
-default: {alert('Error number'); break;}
-}
-repeat = promt('Continue? (1-yes, 0 - no)');
-if(r == 0) flag=false;
-
-}
-true 1
-false 0
+////Юлия Freshcode12:30
+https://github.com/pdcourses/js_pd2022/commit/4fb64a76913fdef318a1f3c9fa071c1ef1891d60
 */
