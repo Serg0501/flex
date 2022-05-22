@@ -1,198 +1,267 @@
-//Массивы
+//Массивы part2
 
-//10,120,6,320
-//prod1.prod2....5
-//totalSum
-
+//Задачи
+/*
+1 Создать массив чисел [4, 0, -1, -5, 3.14, 0, 0, 100, -4, 2.45, 4, 0, 4]
+вывести в консоль
+2 Найти и вывести все отрицательные числа массива(<0)
+3 Посчитать сколько отрицательных чисел (счетчик)
+4 Сохранить результаты работы в массив
+5 Заменить все отрицательные эл-ты в исходном массиве на 0
+*/
 //1
 /*
-let array0=[];
-let array1 = [100, 120, 6, 320, 15];
-*/
-/*
-//2
-let array2 = new Array();
-*/
-/*
-let size = array1.length;
+let a =[4, 0, -1, -5, 3.14, 0, 0, 100, -4, 2.45, 4, 0, 4];
+let size = a.length;
 let i;
-*/
-//задание. вывести массив
-//1
-/*
-console.log(array1);
-*/
-//
-/*
-console.log(array1[0]);
-console.log(array1[1]);
-console.log(array1[2]);
-console.log(array1[3]);
+console.log(a);
 */
 //2
-//i - index 0...4
 /*
-for(i=0; i < array1.length; i++){
-    console.log(array1[i]);
-}
-*/
-
-//объявить массив из 5 чисел и увеличить каждое в 2 раза
-/*
-let array3 = [10,20,30,40,50];
-for(i=0; i<array3.length; i++){
-    array3[i] *= 2; //array3[i] = array3[i] * 2;
-}
-console.log('array 3task:', array3);
-*/
-//задание
-//каждое число увеличить на 100
-/*
-for(i=0; i<array3.length; i++){
-    array3[i] +=100; //array3[i] = array3[i] * 2;
-}
-console.log('array 3task:', array3);
-*/
-
-// Задача вывести массив наоборот (с последнего к первому)
-/*
-for(i = array3.length-1; i>=0; i--){
-    console.log(array3[i]);
-    //console.log(i); вывод индекса
-
-}
-*/
-// Задача вывести элементы с нечетными индексами
-/*
-for(i=1; i<array3.length; i = i + 2){
-    console.log(array3[i]);
-}
-*/
-// Задача вывести элементы с четными индексами
-/*
-for(i=0; i<array3.length; i = i + 2){
-    console.log(array3[i]);
-}
-*/
-/*
-////Юлия Freshcode12:30
-https://github.com/pdcourses/js_pd2022/commit/4fb64a76913fdef318a1f3c9fa071c1ef1891d60
-*/
-
-//задача вывести индексы нулевых эл-тов [100, 0, 0, 300, 0, 500, 600, 0, 0]
-/*
-let a1=[100,0,0,300,0,500,600,0,0]
+let a =[4, 0, -1, -5, 3.14, 0, 0, 100, -4, 2.45, 4, 0, 4];
 let i=0;
-for(i;i<=a1.length;i++){
-  if(a1[i] == 0){
-    console.log(a1[i]);
+for(i;i<a.length;i++){
+  if(a[i] < 0){
+    console.log(a[i]);
   }
 }
 */
-//подсчитать кол-во нулевых эл-тов
+//3
 /*
-let a = [100, 0, 0, 300, 0, 500, 600, 0, 0];
-let countZerro = 0;
+let a =[4, 0, -1, -5, 3.14, 0, 0, 100, -4, 2.45, 4, 0, 4];
+let count = 0;
 for (i=0; i<a.length;i++){
-    if(a[i] == 0){
-        countZerro++;
-        console.log(i);
+    if(a[i] < 0){
+        count++;
+        console.log(a[i]);
     }
 }
+console.log(count)
 */
-// сумма соседних элементов
-// 1+2  2+3  3+4  4+5 ....
-// 1+2  3+4  5+6  7+8 ...
+//4+5
 /*
-а[0] первый элемент массива
-a[1] второй элемент массива
-a[a.length -1] - последний элемент массива
-a[i] - текущий
-a[i+1] - следующий
-a[i+2] - следующий через 1
-a[i-1] - предыдущий
-*/
+let a = [4, 0, -1, -5, 3.14, 0, 0, 100, -4, 2.45, 4, 0, 4];
+console.log(a);
 
-//задача сохранить рез-ты сумм в отдельный массив
-// i индекс для 1го массива, j для 2го массива
-/*
-let sum1 = [];
-for(i; i < a.length-1 ;i++) {
-    sum1[i] = a[i] + a[i+1];   
-}
-console.log(sum1);
-*/
-
-/*
-// вывести все первые элементы массива до первого нуля и подсчитать количество
-let countNotNullElements = 0;
-for(i=0; i<a.length; i++){
-    if(a[i] == 0) break;
-    console.log(a[i]);
-    countNotNullElements++;
-}
-console.log(countNotNullElements);
-*/
-// сумма соседних элементов
-// 1+2  2+3  3+4  4+5 ....
-// 1+2  3+4  5+6  7+8 ...
-
-/*
-а[0] первый элемент массива
-a[1] второй элемент массива
-a[a.length -1] - последний элемент массива
-a[i] - текущий
-a[i+1] - следующий
-a[i+2] - следующий через 1
-a[i-1] - предыдущий
-*/
-
-/*
-let sum = 0;
-for(i; i < a.length-1 ;i++) {
-    sum = a[i] + a[i+1];
-    console.log(sum);    
-}
-*/
-
-/*
-// задача сохранить результаты сум в отдельный массив
-// i индекс для 1 массива, j - индекс для 2 массива
-let sum1 = [];
-for(i; i < a.length-1 ;i++) {
-    sum1[i] = a[i] + a[i+1];   
-}
-console.log(sum1);
-// 2 задача 1+2  3+4  5+ 6 ....
-let sum = 0;
-for(i; i < a.length-1 ;i=i+2) {
-    sum = a[i] + a[i+1];
-    console.log(sum);    
-}
-*/
-// сохранить результаты
-
-let i, a = [10, -20, 50, 100, 0, 0, 300, 0, 500, 600, 0, 0];
-let j=0, sum2 = [];
-for(i=0; i < a.length-1 ;i=i+2) {
-    sum2[j] = a[i] + a[i+1]; 
-    j++;  
-}
-console.log(sum2);
-
-/*
-for(i=0, j=0; i < a.length-1 ;i=i+2, j++) {
-    sum2[j] = a[i] + a[i+1]; 
-}
-*/
-
-
-
-// сохранить результаты индексов нулевых элементов
-let arrZeroIndexes = [], indexZero;
-for(i=0, indexZero = 0 ; i<a.length; i++){
-    if(a[i] == 0){
-        arrZeroIndexes[indexZero] = i;
-        indexZero++;
+let countBelowZeroEls  = 0, arrayElBelowZero = [], arrayIndexesElBelowZero = [] ;
+for(let i=0; i<a.length; i++){
+    if( a[i] < 0){
+        //console.log(a[i]);
+        arrayElBelowZero [countBelowZeroEls] = a[i];
+        arrayIndexesElBelowZero [countBelowZeroEls] = i;
+        countBelowZeroEls++;
+        a[i] = 0;
     }
 }
+
+console.log(`countBelowZeroEls = ${countBelowZeroEls}`);
+console.log(arrayElBelowZero);
+console.log(arrayIndexesElBelowZero);
+console.log(a);
+*/
+
+//Функция + Массив
+
+//Сумма чисел в массиве
+/*
+function sumElsArray(a){
+    let sum = 0;
+    for(let i=0; i< a.length; i++){
+        sum += a[i];
+    }
+    return sum;
+}
+
+let a1 = [1,2,3,4,5], a2 = [10,20,30], a3 = [-4, 2, 0, 3.14, 15];
+let result;
+result = sumElsArray(a1);
+console.log(result);
+result = sumElsArray(a2);
+console.log(result);
+result = sumElsArray(a3);
+console.log(result);
+*/
+
+//прошлое задание сделать функцией
+//принять массив, вернуть массив у которого отрицательные эл-ты первратились в 0
+
+/*
+function task1(a){
+    let countBelowZeroEls  = 0, arrayElBelowZero = [], arrayIndexesElBelowZero = [] ;
+    for(let i=0; i<a.length; i++){
+        if( a[i] < 0){
+            arrayElBelowZero [countBelowZeroEls] = a[i];
+            arrayIndexesElBelowZero [countBelowZeroEls] = i;
+            countBelowZeroEls++;
+            a[i] = 0;
+        }
+    }
+    console.log(`countBelowZeroEls = ${countBelowZeroEls}`);
+    console.log(arrayElBelowZero);
+    console.log(arrayIndexesElBelowZero);
+    return a; 
+    }
+    
+    result = task1(a);
+    console.log(result);
+    */
+
+
+    /*
+Задачи
+1. создать массив чисел [4, 0, -1, -5, 3.14, 0, 0, 100, -4, 2.45, 4, 0, 4]
+вывести в консоль
+2. найти и вывести все отрицательные числа массива <0
+3. посчитать сколько получилось отрицательных чисел (счетчик)
+4*. сохранить результаты работы (в массив)
+два счетчика i - исходного массива, j - для массива с результатами
+5*.  заменить все отрицательные элементы в исходном массиве на 0  
+*/
+
+/*
+let a = [4, 0, -1, -5, 3.14, 0, 0, 100, -4, 2.45, 4, 0, 4];
+console.log(a);
+
+    
+        
+          
+    
+
+        
+    
+    @@ -28,3 +29,138 @@ console.log(arrayElBelowZero);
+  
+let countBelowZeroEls  = 0, arrayElBelowZero = [], arrayIndexesElBelowZero = [] ;
+for(let i=0; i<a.length; i++){
+    if( a[i] < 0){
+        //console.log(a[i]);
+        arrayElBelowZero [countBelowZeroEls] = a[i];
+        arrayIndexesElBelowZero [countBelowZeroEls] = i;
+        countBelowZeroEls++;
+        a[i] = 0;
+    }
+}
+console.log(`countBelowZeroEls = ${countBelowZeroEls}`);
+console.log(arrayElBelowZero);
+console.log(arrayIndexesElBelowZero);
+console.log(a);
+function sumElsArray(a){
+    let sum = 0;
+    for(let i=0; i< a.length; i++){
+        sum += a[i];
+    }
+    return sum;
+}
+let a1 = [1,2,3,4,5], a2 = [10,20,30], a3 = [-4, 2, 0, 3.14, 15];
+let result;
+result = sumElsArray(a1);
+console.log(result);
+result = sumElsArray(a2);
+console.log(result);
+result = sumElsArray(a3);
+console.log(result);
+// прошлое задание сделать функцией
+// принять массив , вернуть массив у которого отрицательные элементы 
+// превратились в ноль
+function task1(array){
+let countBelowZeroEls  = 0, arrayElBelowZero = [], arrayIndexesElBelowZero = [] ;
+for(let i=0; i<array.length; i++){
+    if( array[i] < 0){
+        arrayElBelowZero [countBelowZeroEls] = array[i];
+        arrayIndexesElBelowZero [countBelowZeroEls] = i;
+        countBelowZeroEls++;
+        array[i] = 0;
+    }
+}
+console.log(`countBelowZeroEls = ${countBelowZeroEls}`);
+console.log(arrayElBelowZero);
+console.log(arrayIndexesElBelowZero);
+return array; 
+}
+result = task1(a);
+console.log(result);
+result = task1([1,2,3,4,5]);
+console.log(result);
+let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+  ];
+  let matrix2 = [
+    [1, 2, 3, 4],
+    [4, 5, 6 , 0]
+  ];
+console.log(matrix);
+console.log(matrix2);
+console.log(matrix[0][0]);
+console.log(matrix[0][2]);
+console.log(matrix[1][2]);
+console.log(matrix[2][2]);
+*/
+/*
+Задания
+1. написать функцию которая возвращает все элементы массива не 
+превышающие заданный порог
+2. написать функцию которая вернет квадраты элементов заданного массива
+1 2 3 4 5
+1 4 9 16 25
+3. написать функцию которая вернет сумму положительных элементов массива
+4. * вернуть обратный массив (развернуть массив наоборот)
+*/
+
+function arrayTask1(array, limit){
+    let result = [], i, j=0;
+    for(i=0; i<array.length; i++){
+        if(array[i] <= limit){
+            result[j] = array[i];
+            j++;
+        }
+    }
+    return result;
+}
+
+function arrayTask2(array){
+    for(let i=0; i<array.length; i++){
+        array[i] = array[i] ** 2;
+    }
+    return array;
+} 
+
+function arrayTask3(array){
+    let result =0;
+    for(let i=0; i<array.length; i++){
+        if(array[i] > 0){
+            result += array[i];
+        }
+    }
+    return result;
+} 
+
+function arrayTask4(array){
+    let res  = [];
+    for(let i=array.length-1, j=0; i>=0;  i--, j++){
+        res[j] = array[i];
+    }
+    return res;
+}
+/*
+function arrayTask4(array){
+    let res  = [];
+    for(let i=0, j=array.length-1; i < array.length;  i++, j--){
+        res[j] = array[i];
+    }
+    return res;
+}
+*/
+
+
+let a= [8,2,12,5,50,60,2,-1,10,11], res;
+res = arrayTask1(a, 10);
+console.log(a);
+console.log(res);
+res = arrayTask2(a);
+console.log(res);
+res = arrayTask3(a);
+console.log(res);
+res = arrayTask4(a);
+console.log(res);
