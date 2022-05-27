@@ -1,149 +1,99 @@
+//Циклы. Массивы. Функции
+
+// Все задания оформить в виде функций: 
+
+// 1 Вывести знак * столько раз сколько задаст пользователь
 /*
-Область видимость
-Лексическая область видимости. Лексическое окружение
-*/
-/*
-function f(a,b){
-    var x=5;
+function task1(starsCount,n=0){
+    for(n;starsCount<=n;n++){
+        task1+='*'
+        console.log(task1);
+    }
 }
+task1(prompt('Введите колличество *'));
 */
-//******************** */
-/*
-let sum=0;
-//console.log('i=',i); error!
-for(var i=0; i<10; i++){
-    sum += i;
-    console.log(i, sum);
+/* //?????????
+function repeatMsg(msg,n){
+    let i;
+    for(i=1;i<=msg;i++){
+        console.log(n+='*');
+    }
 }
-console.log(sum);
-//console.log('i=',i); error!
-console.log('i=',i);
+repeatMsg(prompt('Введите колличество *'));
 */
+// 2 Вывод чисел от limit1 до limit2, которые кратны num
 /*
-if(true){
-    const test=100;
-    console.log(test);
-}
-*/
-/*
-console.log(test);
-if(true){
-    var test=200;
-    console.log(test);
-}
-*/
-/*
-// поднятие переменных и замыкание
-if (true) {
-  console.log(test);
-  if (true) {
-    console.log(test);
-    if (true) {
-      console.log(test);
-      if (true) {
-        console.log(test);
-        if (true) {
-          console.log(test);
-          var test = 100;
-          console.log(test);
+function task2(lim1,lim2,num,n){
+    for(n=lim1; n<=lim2; n=lim1++){
+        if (n%num==0){
+           console.log(n) 
         }
-        test=200;
-        console.log(test);
-      }
-      test=300;
-      console.log(test);
     }
-    test=400;
-    console.log(test);
-  }
-  test=500;
-  console.log(test);
 }
-console.log(this); // доспуп к глобальному обьекту window
-console.log(this.test);
 */
 /*
-// строгий режим
-"use strict";
-
-    
-          
-            
-    
-
-          
-          
-            
-    
-
-          
-    
-    @@ -118,7 +118,42 @@ console.log(x); //?? 300  glob x
-  
-function f(){
-    let test=10;
-    return test;
+function task2(lim1,lim2,num){
+    for(lim1; lim1<=lim2; n=lim1++){
+        if (lim1%num==0){
+           console.log(lim1) 
+            }
+        }
 }
-console.log(f());
-// ***************************************
-// глобальная область
-let x = 100;
-function fun1(){
-    console.log('x=',x);
-}
-function fun2(){
-    let x = 200;
-    console.log('x=',x);
-}
-function fun3(){
-    x = 300;
-    console.log('x=',x);
-}
-function fun4(){
-    let a = 10, b=20;
-    return (a*b  + 100 - 4*a + 5 )/x;
-}
-console.log(x); //100
-fun1();  //100
-fun2(); // 200
-console.log(x); //??  100 glob x
-fun3(); // 300
-console.log(x); //?? 300  glob x
-console.log(fun4()); // x=300
-console.log(x); //?? x=100
-//**************** */
-/*
-let name = "John";
-function sayHi() {
-  alert("Hi, " + name);
-}
-name = "Pete";
-sayHi(); // что будет показано: "John" или "Pete"?
+task2(prompt('Введите начальное значение'),prompt('Введите конечное значение'),prompt('Введите значение num'));
 */
-//************** */
-console.log('************************');
 
-function fun(){
-    let test = 10;
-    return function(){
-        return ++test;
+// 3 Сумма четных элементов массива
+/*
+let a =[4, 45, -1, -5, 3.14, 0, 25, 100, -4, 2.45, 4, 0, 88];
+//console.log (a);
+let count = 0;
+for (i=0; i<a.length;i++){
+    if(a[i]%2==0){
+        count+=a[i];
+        //console.log(a[i]);
+    }
+}
+console.log(count)
+*/
+/*
+let a =[4, 45, -1, -5, 3.14, 0, 25, 100, -4, 97, 2.45, 4, 0, 88];
+
+function task3(a){
+    let count = 0, sumEvenEl =[];
+        for (i=0; i<a.length;i++){
+        if(a[i]%2==0){
+            sumEvenEl[count]=a[i];
+            count+=a[i];
+        }
+    console.log (`{count} = ${count}`);
+    return a;
     }
 }
 
-let res = fun();
-console.log(res());
-console.log(res());
-console.log(res());
-console.log(res());
-console.log(res());
-console.log(res());
-console.log(res());
-console.log('************************');
-let res2 = fun();
-console.log(res2());
-console.log(res2());
-console.log(res2());
-console.log(res2());
-console.log(res2());
-console.log(res2());
-console.log(res2());
+ 
+result = task3(a);
+console.log(result);
+console.log(a);
+*/
+//4 Обнулите все элементы массива меньше 10
+
+let a =[4, 45, -1, -5, 3.14, 0, 25, 100, -4, 2.45, 4, 0, 88];
+console.log(a);
+    function task4(a){
+        let countBelowTen=0, arrayElBelowTen=[];
+            for(i=0;i<a.length;i++){
+                if(a[i]<10){
+                    arrayElBelowTen[countBelowTen] = a[i];
+                    countBelowTen++;
+                    a[i]=0;    
+        }
+    }
+return a;
+}
+result = task4(a);
+console.log(result);
+
+// 5 Напишите функцию, которая дополняет нулями целое число до оказанной длины. Поработайте вариант с отрицательными числами. Например, fun(-4,6) вернет строку -000004
+
+
+//6 соедините два массива в один большой
