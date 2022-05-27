@@ -3,23 +3,54 @@
 // Все задания оформить в виде функций: 
 
 // 1 Вывести знак * столько раз сколько задаст пользователь
+
+function repeatMsg(msg){
+    let i;
+    for(i=1;i<=msg;i++){
+        console.log('hello');
+    }
+}
+repeatMsg(8);
+ /*
+function task1(starsAmount, starsSimbols){
+    let i;
+        for(i;i<=starsAmount;i++){
+            starsSimbols+=starsAmount;
+        }
+        return starsSimbols;
+}
+task1(prompt('Введите колличество *'));
+result=task1;
+console.log(result);
+*/
 /*
-function task1(starsCount,n=0){
-    for(n;starsCount<=n;n++){
-        task1+='*'
-        console.log(task1);
+function printStars(symbolStr, countMax){
+    let i, str="";
+    for(i=1;i<=countMax;i++){
+        str=str+symbolStr;
+    }
+    return str;
+    //console.log(str); //printSymbols("*",5);
+    //return str; // вызов console.log(printSymbols("*",5))
+}
+let result;
+result=printSymbols("*",5);
+console.log(result);
+result=printSymbols("*",15);
+console.log(result);
+result=printSymbols("$",12);
+console.log(result);
+*/
+/*
+//?????????
+function task1(msg,n){
+    let i;
+    for(i>=1;i<=msg;i++){
+        n+='*';
+        console.log(n);  
     }
 }
 task1(prompt('Введите колличество *'));
-*/
-/* //?????????
-function repeatMsg(msg,n){
-    let i;
-    for(i=1;i<=msg;i++){
-        console.log(n+='*');
-    }
-}
-repeatMsg(prompt('Введите колличество *'));
 */
 // 2 Вывод чисел от limit1 до limit2, которые кратны num
 /*
@@ -44,39 +75,25 @@ task2(prompt('Введите начальное значение'),prompt('Вв�
 
 // 3 Сумма четных элементов массива
 /*
-let a =[4, 45, -1, -5, 3.14, 0, 25, 100, -4, 2.45, 4, 0, 88];
-//console.log (a);
-let count = 0;
-for (i=0; i<a.length;i++){
-    if(a[i]%2==0){
-        count+=a[i];
-        //console.log(a[i]);
-    }
-}
-console.log(count)
-*/
-/*
 let a =[4, 45, -1, -5, 3.14, 0, 25, 100, -4, 97, 2.45, 4, 0, 88];
-
-function task3(a){
-    let count = 0, sumEvenEl =[];
-        for (i=0; i<a.length;i++){
-        if(a[i]%2==0){
-            sumEvenEl[count]=a[i];
-            count+=a[i];
-        }
-    console.log (`{count} = ${count}`);
-    return a;
-    }
-}
-
- 
-result = task3(a);
-console.log(result);
 console.log(a);
+    function task3(a){
+            let sumEvenEl = 0, arrayEvenEl=[];
+                for (i=0; i<a.length;i++){
+                    if(a[i]%2==0){
+                        arrayEvenEl[sumEvenEl]=a[i];
+                        sumEvenEl +=a[i];
+                    }
+                }
+console.log(arrayEvenEl); // В консоли выводит(105) [4, пусто × 3, 100, пусто × 95, 4, пусто × 3, 88])????           
+return sumEvenEl;
+    }
+result = task3(a);
+console.log('Сумма четных элементов ',result);
 */
-//4 Обнулите все элементы массива меньше 10
 
+//4 Обнулите все элементы массива меньше 10
+/*
 let a =[4, 45, -1, -5, 3.14, 0, 25, 100, -4, 2.45, 4, 0, 88];
 console.log(a);
     function task4(a){
@@ -86,12 +103,13 @@ console.log(a);
                     arrayElBelowTen[countBelowTen] = a[i];
                     countBelowTen++;
                     a[i]=0;    
-        }
-    }
+                }
+            }
 return a;
-}
+    }
 result = task4(a);
 console.log(result);
+*/
 
 // 5 Напишите функцию, которая дополняет нулями целое число до оказанной длины. Поработайте вариант с отрицательными числами. Например, fun(-4,6) вернет строку -000004
 
