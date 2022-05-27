@@ -4,55 +4,21 @@
 
 // 1 Вывести знак * столько раз сколько задаст пользователь
 
-function repeatMsg(msg){
-    let i;
-    for(i=1;i<=msg;i++){
-        console.log('hello');
-    }
-}
-repeatMsg(8);
- /*
-function task1(starsAmount, starsSimbols){
-    let i;
-        for(i;i<=starsAmount;i++){
-            starsSimbols+=starsAmount;
-        }
-        return starsSimbols;
-}
-task1(prompt('Введите колличество *'));
-result=task1;
-console.log(result);
-*/
 /*
-function printStars(symbolStr, countMax){
+function task1(symbolStr, countMax){
     let i, str="";
-    for(i=1;i<=countMax;i++){
-        str=str+symbolStr;
+    for(i=1; i<=countMax; i++){
+        str = str + symbolStr;
     }
     return str;
-    //console.log(str); //printSymbols("*",5);
-    //return str; // вызов console.log(printSymbols("*",5))
 }
-let result;
-result=printSymbols("*",5);
-console.log(result);
-result=printSymbols("*",15);
-console.log(result);
-result=printSymbols("$",12);
+
+result = task1("*", prompt('Введите звёзды'));
 console.log(result);
 */
-/*
-//?????????
-function task1(msg,n){
-    let i;
-    for(i>=1;i<=msg;i++){
-        n+='*';
-        console.log(n);  
-    }
-}
-task1(prompt('Введите колличество *'));
-*/
+
 // 2 Вывод чисел от limit1 до limit2, которые кратны num
+
 /*
 function task2(lim1,lim2,num,n){
     for(n=lim1; n<=lim2; n=lim1++){
@@ -72,6 +38,7 @@ function task2(lim1,lim2,num){
 }
 task2(prompt('Введите начальное значение'),prompt('Введите конечное значение'),prompt('Введите значение num'));
 */
+
 
 // 3 Сумма четных элементов массива
 /*
