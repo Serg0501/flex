@@ -1,97 +1,74 @@
+//Array. String
+//1 Отфильтруйте отрицательные элементы в массиве, оставив только положительные
+
+//let arr = [ 107, 21, -0.5, 89, 5, 101, - 15, 0.64, 7, 0, -3, 99, 568, 0.1, 55];
+
 /*
-1 Подсчитать сумму нечетных эелементов массива
-2 Вывести индексы нулевых элементов массива
-3 дано 2 массива. соединить и преобразовать в строку
-4 отфильтровать масив, удалив все нули
+let task1 = arr.filter(el => el>=0);
+console.log(task1);
 */
+//2 Найдите сумму элементов массива которые меньше 100 по значению
 
-// a = [10,5,6,7,0,1,1,1,0,12]
-
-/*
-function task1(a){
-    let sum = 0;
-    for(let i=0; i<arr.length; i++){
-        if(a[i]%2 != 0){
-            sum = sum + a[i];
-        }        
-    }
-    return sum;
-}
-function task2(a){
-    let res=[],i,j;
-    for(i=0,j=0; i<a.length; i++){
-        if(a[i] == 0){
-            res[j] = a[i];
-            j++;
-        }
-    }
-    return res;
-}
-function task3(a1, a2){
-    let res = [];
-    res = a1.slice(); // last index a1.length-1
-    for(i=0, j=a1.length; i<a2.length; i++, j++){
-        res[j]=a2[i];
-    }
-    return res.toString();
-}
-function task3_2(a1, a2){
-    let s1,s2, res;
-    s1 = a1.toString();
-    s2 = s2.toString();
-    res = s1 + s2;
-    return res;
-}
-// отфильтровать масив, удалив все нули
-// итоговый массив без нулей!
-// собрать массив только тех кто не ноль
-function task4(a){
-    let res = [] , i, j;
-    for(i=0, j=0; i<a.length; i++){
-        if(a[i] !=0 ){
-            res[j] = a[i];
-            j++;
-        }
-    }
-    return res;
-}
-*/
 
 /*
-//1-1
-let a = [4,0,8,10,1,0,5,7,5,0,4,6];
-//нечетное?
-function isOdd(value) {
-    return value%2 != 0;
-  }
-  
-let res1 = a.filter(isOdd); //оставлю только нечетные 
-function sum(accum, val) {
-    return accum, val;
-}
-let res2 = res1.reduce(sum);
-*/
-
-/*
-//1-2
-let resOdd = a.filter(isOdd = (value) => value%2 == 1);
-let resSum = resOdd.reduce(sumNum = (a, b) => a + b)
+let resLessHund = arr.filter(isLessHund = (value) => value<100);
+let resSum = resLessHund.reduce(sumNum = (a, b) => a + b)
 console.log(resSum);
 */
 
+/*
+let task2 = arr.filter((el, i) => (el<100)).reduce((accum, val) => accum + val);
+console.log(task2);
+*/
 
-//1-3
-//let sum = (a) => a.filter((el, i) => (el%2)).reduce((accum, val) => accum + val);
+//3 Уменьшите каждый элемент массива на 3%
 
-//1-4
+/*
+let task3 = arr.forEach((el,i,arr)=>arr[i]*=0.97);
+console.log(arr);
+*/
 
-let sum = (a) => {
-    let res = 0;
-    a.forEach((el) => {
-        if(el%2 != 0) res += el;
-    });
-    return res;
-};
+//4 Если все элементы массива меньше 100 увеличьте их на 5%
 
-// нечетный оставляю, а любой четный превращаю в ноль, а потом сумма с помощью reduce
-let sum = (a) => a.forEach((el) => (el%2 != 0) ? el : 0).reduce((accum, val) => accum + val);
+//let arr = [ 107, 21, -0.5, 89, 5, 101, - 15, 0.64, 7, 0, -3, 99, 568, 0.1, 55];
+
+//let arr = [ 10, 21, -0.5, 89, 5, 11, - 15, 0.64, 7, 0, -3, 99, 58, 0.1, 55];
+/*
+let task4 = arr.every((el,i,arr)=>arr[i]<100);
+console.log(task4); 
+
+let  = arr.forEach((el,i,arr)=>arr[i]*=1.05);
+console.log(arr);
+*/
+// как сделать чтоб отрабатывало тру/фолс????
+   
+
+
+
+
+//5 Проверьте является ли слово палиндромом (например слово abcddcba подходит т.к. оно "зеркальное")
+
+
+//6 Соедините две строки в одну и переверните наоборот
+
+//let a1 = [1,2,3,4,5,6,7,8,9];
+//let a2= [10,20,30,40,50,60,70,80,90];
+/*
+console.log(a1,a2);
+let a3 = a1.concat(a2);
+console.log(a3);
+let a4 = a3.reverse()
+console.log(a4);
+*/
+/*
+// НЕ знаю правильно ли????
+let task6 = (a1, a2) => a1.concat(a2);
+console.log(task6);
+*/
+//7* Напишите функцию, которая преобразует первую букву каждого слова строки в верхний регистр.
+
+
+//8* Вывести индексы минимальных элементов массива
+
+
+
