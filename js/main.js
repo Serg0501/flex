@@ -52,8 +52,7 @@ arr === arr.split('').reverse().join('') // == тоже отрабатывает
 ? console.log('Палиндромом')
 : console.log('Не палиндромом')
 }
-task5 (a1);
-task5 (a2);
+task5 (a1),task5 (a2);
 */
 
 //6 Соедините две строки в одну и переверните наоборот
@@ -64,7 +63,7 @@ let a2= [10,20,30,40,50,60,70,80,90];
 console.log(a1,a2);
 let a3 = a1.concat(a2);
 console.log(a3);
-let a4 = a3.reverse()
+let a4 = a3.reverse();
 console.log(a4);
 // отрабатывает лучше
 */
@@ -75,13 +74,25 @@ let a2 = '10,20,30,40,50,60,70,80,90'
 
 let task6 = a1.split(' ').concat(a2.split(' ')).reverse().join(' ');
 console.log(task6);
-//отрабатывает не так, как в выше!!!!
+//отрабатывает не так, как выше!!!!
 */
 
 //7* Напишите функцию, которая преобразует первую букву каждого слова строки в верхний регистр.
 
 
 //8* Вывести индексы минимальных элементов массива
+/*
+let arr = [ 107, 21, -0.5, 89, 5, 101, - 15, 0.64, 7, 0, -3, 99, 568, 0.1, 55];
+console.log(arr);
 
-
-
+function task8(arr, min) {
+    let minEl=[];
+    arr.forEach((el, i) => {
+        if (el<min) {
+            minEl.push(i);
+        }
+    })
+    return minEl;
+}
+console.log(task8(arr, prompt('Введите min:')));
+*/
