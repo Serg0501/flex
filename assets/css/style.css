@@ -1,0 +1,198 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+body{
+    display: grid;
+    grid-template-rows: 900px 2700px 200px;
+}
+
+header{
+    background-image:url('/assets/images/grid/header2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    
+}
+
+.headerInfo{
+    display: grid;
+    grid: repeat(3,1fr)/1fr;
+    align-items:center;
+    justify-items:center;
+    row-gap: 50px;
+}
+
+
+.headerInfo h1{
+    font-size: 70px;
+    color: white;
+    
+}
+
+.headerInfo p{
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.headerInfo a{
+    width: 200px;
+    height: 80px;
+    border-radius: 55px;
+    border: 2px solid gray;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+main{
+    display: grid;
+    grid-template-rows: 20% 40% 20% 20% ;
+    border: 1px solid black;
+}
+
+.web{
+    height: px;
+    background-color: lightslategray;
+    display: grid;
+    grid: repeat(2,1fr);
+    align-items:center;
+    justify-items:center;
+}
+
+.webInformation{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items:center;
+    justify-items: center;
+    column-gap: 100px;
+}
+
+.web h2{
+    font-size: 55px;
+}
+
+.webInformation p{
+    font-size: 40px;
+}
+
+.cardSection{
+    display: grid;
+    grid: 1fr/ repeat(3, 1fr);
+    padding: 30px;
+    gap: 50px;
+    justify-content: center;
+    background-color: darkslategray;
+}
+
+
+.card{
+    display: grid;
+    grid-template-rows: 40% 10% 50%;
+    align-items:center;
+    justify-items:center;
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.webImg{
+    
+    height:auto;
+}
+
+
+
+.card h2{
+    font-size: 50px;
+}
+
+.card p{
+    font-size: 40px;
+}
+
+.information{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    align-items:center;
+    justify-items:center;
+    padding: 80px 0 80px 0;
+}
+
+.information h3{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.information p{
+    font-size: 40px;
+}
+
+.nav{
+    display: grid;
+    grid: 1fr / repeat(2, 1fr);
+    
+}
+
+.nav h2{
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav p{
+    font-size: 40px;
+    color: white;
+    
+}
+
+.contact{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    background-color: blue;
+    padding-top: 100px;
+}
+
+.about{
+    display: grid;
+    grid-template-rows: 33% 66%;
+    background-color: lightslategray;
+    padding-top: 100px;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: black;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    align-items:center;
+    justify-items:center;
+}
+
+.footer a{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
