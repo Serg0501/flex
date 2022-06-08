@@ -1,67 +1,96 @@
-/*CLASS*/
-
-// ООП
-
+//JS object
 /*
-фундамент - объект
-class - класс для обьекта (не класс правила CSS)
-сложный тип данных, то что описывает объект, набор свойств
-очень похожа на шаблон
-родитель для объектов
-"паска"
-"шаблон"
-"станок"
+Task 1 Создайте объект ноутбука 
+
+1 Серийный номер 3V5E7EA
+2 Модель HP 255 G8
+3 Экран:
+Тип экрана IPS
+Разрешение 1920x1080
+4 Процессор Восьмиядерный AMD Ryzen 7 5700U (1.8 - 4.3 ГГц)
+5 Оперативная память 8 ГБ
+6 Накопители данных:
+Объём HDD 256 ГБ SSD
+Видеокарта AMD Radeon Graphics
+7 Корпус: 
+Цвет Серебристый
+Вес 1,7
+Габариты (Ш х Г х В) 358 x 242 x 19
+
+PS если ноут не хотите создайте обьект по любой интересующей Вас теме
 */
 
-//{login: '', password: ''}
-class User{
-    //constructor - функция которая описывает создание будущих объектов
-    // this - указатель на текущий объект
-    // в качетсве параметра - примитив (число, строка..) [] {}
-    constructor(loginValue, passwordValue){
-        this.login = loginValue;
-        this.password = passwordValue;
-    }
-    outObject(){
-        console.log(this);
-    }
-};
-
-// new - оператор для создания нового объекта
-const user1 = new User('login1', 'qwerty');
-const user2 = new User('superman', 'qwerty12345');
-const user3 = new User('vasya-petrov', 'qwerty');
-
-console.log('user#1: ',user1);
-console.log('user#2: ',user2);
-console.log('user#3: ',user3);
-
-console.log('*****************');
-
-user1.outObject();
-user2.outObject();
-user3.outObject();
-
-//  класс машин
-// модель, цвет, год выпуска, объект двигателя (модель, мощность)
-
-class Engine{
-    constructor(name, power){
-        this.name = name;
-        this.power = power;
+/*
+const objNoteBook = {
+    serialNumber:'3V5E7EA', 
+    model:'HP255G8',
+    screen:{
+        screenType: 'IPS',
+        resolution: [1920,1080],
+    },
+    processor:{ 
+        type:'AMD Ryzen 7 5700U',
+        octaCore: '1.8 - 4.3 GHz',
+    },
+    ram:'8GB', 
+    dataStorageDevices:{
+        hddCapacity:'256 GB SSD', 
+        type:'AMD Radeon Graphics',
+},
+    body:{
+        color:'Silver', 
+        weight:'1.7 kg', 
+        dimensions:{W:358, D:242,  H: 19}, 
     }
 };
 
-class Car{
-    constructor(model, color, year, engine){
-        this.model = model;
-        this.color = color;
-        this.year = year;
-        this.engine = engine;
-    }
-};
-const engine1 = new Engine('1234-12345677', 1000);
-const car1 = new Car('modelX', 'black', 2022, engine1);
-console.log(car1);
-console.log(car1.model);
-console.log(car1.engine);
+console.log(objNoteBook);
+*/
+
+
+
+//Task 2 Создайте класс который описывает создание нового пользователя с помощью логина и пароля. 
+//Сделайте несколько обьектов. Создайте массив из нескольких обьектов (не вводите id)
+
+
+   const user1= {
+        login:'MrPhoneHolder',
+        password:'CallmemayBe',
+
+    };
+    const user2= {
+        login:'JavaScripter',
+        password:'JSRyyyyyyLES',
+
+    };
+    const user3= {
+        login:'doctorGamer',
+        password:'oneMoreCut98',
+
+    };
+    const user4= {
+        login:'Jeka Karas',
+        password:'3hasBoomBera'
+
+    };
+    const user5= {
+        login:'Leha classic',
+        password:'smotryZlimVzgadom',
+
+    };
+
+
+let arrUsers = new Set([user1, user2, user3, user4, user5]);
+
+console.log(Array.from(arrUsers));
+
+
+//Task 3 Из полученого массива в задании 2 сделайте карту (map). в качестве ключа используйте логин
+
+const usersMap = new Map();
+arrUsers.forEach(element => usersMap.set(element.login, element));
+console.log(usersMap);
+
+
+
+//Task 4* разными способами решите вопрос соедитения двух массивов без повторов
