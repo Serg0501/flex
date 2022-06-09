@@ -20,7 +20,7 @@ Task 1 Создайте объект ноутбука
 PS если ноут не хотите создайте обьект по любой интересующей Вас теме
 */
 
-/*
+
 const objNoteBook = {
     serialNumber:'3V5E7EA', 
     model:'HP255G8',
@@ -40,13 +40,11 @@ const objNoteBook = {
     body:{
         color:'Silver', 
         weight:'1.7 kg', 
-        dimensions:{W:358, D:242,  H: 19}, 
+        dimensions:{W:358, D:242,  H:19}, 
     }
 };
 
 console.log(objNoteBook);
-*/
-
 
 
 //Task 2 Создайте класс который описывает создание нового пользователя с помощью логина и пароля. 
@@ -92,5 +90,14 @@ arrUsers.forEach(element => usersMap.set(element.login, element));
 console.log(usersMap);
 
 
-
 //Task 4* разными способами решите вопрос соедитения двух массивов без повторов
+
+const a1 = [1,2,3,4,5,6,7,8,9];
+const a2 = [10,20,30,40,50,60,70,80,90];
+console.log(a1,a2);
+
+const a3 = [...a1, ...a2]; //#1
+const a4 = a1.concat(a2);  //#2
+console.log(a3,a4);
+
+
