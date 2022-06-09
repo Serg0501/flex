@@ -84,11 +84,11 @@ console.log(Array.from(arrUsers));
 
 //#2
 class Users{
-    constructor(login, pass){
+    constructor(login, password){
         this.login = login;
-        this.pass = pass;
+        this.pass = password;
     }
-}
+};
 
 let user6, user7, user8, user9, user10;
 
