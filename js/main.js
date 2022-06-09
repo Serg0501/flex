@@ -50,7 +50,7 @@ console.log(objNoteBook);
 //Task 2 Создайте класс который описывает создание нового пользователя с помощью логина и пароля. 
 //Сделайте несколько обьектов. Создайте массив из нескольких обьектов (не вводите id)
 
-
+//#1
    const user1= {
         login:'MrPhoneHolder',
         password:'CallmemayBe',
@@ -68,7 +68,7 @@ console.log(objNoteBook);
     };
     const user4= {
         login:'Jeka Karas',
-        password:'3hasBoomBera'
+        password:'3hasBoomBera',
 
     };
     const user5= {
@@ -82,11 +82,31 @@ let arrUsers = new Set([user1, user2, user3, user4, user5]);
 
 console.log(Array.from(arrUsers));
 
+//#2
+class Users{
+    constructor(login, pass){
+        this.login = login;
+        this.pass = pass;
+    }
+}
+
+let user6, user7, user8, user9, user10;
+
+const users = [
+    user6 = new Users('MrPhoneHolder', 'CallmemayBe'),
+    user7 = new Users('JavaScripter', 'JSRyyyyyyLES'),
+    user8 = new Users('doctorGamer', 'oneMoreCut98'),
+    user9 = new Users('Jeka Karas', '3hasBoomBera'),
+    user10 = new Users('Leha classic', 'smotryZlimVzgadom'),
+]
+
+console.log(users);
 
 //Task 3 Из полученого массива в задании 2 сделайте карту (map). в качестве ключа используйте логин
 
 const usersMap = new Map();
-arrUsers.forEach(element => usersMap.set(element.login, element));
+arrUsers.forEach(el => usersMap.set(el.login, el)); // для #1
+users.forEach(el => usersMap.set(el.login, el)); //  для #2
 console.log(usersMap);
 
 
