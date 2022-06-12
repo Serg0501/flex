@@ -107,7 +107,24 @@ console.log(result);
 class genArray{
     constructor(start, end, step = 1){
         this.start = start;
-	@@ -27,7 +129,10 @@ class genArray{
+        this.end = end;
+        this.step = step;
+        this.array = [];
+        this._count = (this.end - this.start) / this.step;
+    }
+    makeArray(){
+        this.array[0] = this.start;
+        for(let i=1; i <= this._count; i++){
+            this.array[i] = this.array[i-1] + this.step;
+        }
+        return this.array;
+    }
+    makeArray2(){
+        for(let i=0, value=this.start; value <= this.end; i++, value += this.step){
+            this.array[i] = value;
+        }
+        return this.array;
+    }
     outArray(){
         console.log(this.array);
     }
@@ -116,7 +133,8 @@ getArray.outArray = funnction(){
     console.log(this.array);
 }
 let a1 = new genArray(100, 120, 2);
-	@@ -36,36 +141,4 @@ a1.outArray();
+a1.makeArray();
+a1.outArray();
 let a2 = new genArray(100, 120);
 a2.makeArray();
 a2.outArray();
