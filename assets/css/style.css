@@ -5,7 +5,6 @@
     margin: 2px;
     transition: 1s ease;
 }
-
 #container{
     display: flex;
     justify-content: center;
@@ -16,8 +15,8 @@
 
 body{
     background: black;
+    color: white;
 }
-
 
 
 
