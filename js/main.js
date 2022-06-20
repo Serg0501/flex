@@ -6,14 +6,12 @@ function createUserImage(userImageSrc){
     imgCont.append(imgUser);
     return imgCont;
 }
-
 function createUserFullname(fullName){
     const userFullName = document.createElement('p');
     userFullName.classList.add('user_fullname');
     userFullName.innerText = fullName;
     return userFullName;
 }
-
 function createBtnContainer(stats){
     const btnContainer = document.createElement('div');
     btnContainer.classList.add('button_container');
@@ -36,7 +34,7 @@ function createBtnContainer(stats){
 }
 
 function createCard(objUser){
-    const card = document.createElement('div');
+    const card = document.createElement('li');
     card.classList.add('card_container');
     card.append(createUserImage(objUser.imgSrc));
     const infoCont = document.createElement('div');
@@ -46,19 +44,35 @@ function createCard(objUser){
     card.append(infoCont);
     return card;
 }
+const users = [
+    {
+        imgSrc: '#',
+        fullName: 'Tom Fox',
+        stats: {
+            fb: '10000',
+            insta: '12500',
+            tel: '8600'
+        }
+    },
+    {
+        imgSrc: '#',
+        fullName: 'John Smith',
+        stats: {
+            fb: '10000',
+            insta: '12500',
+            tel: '8600'
+        }
+    },
+    {
+        imgSrc: '#',
+        fullName: 'Ann Fox',
+        stats: {
+            fb: '10000',
+            insta: '12500',
+            tel: '8600'
+        }
+    },
+];
 
-const user = {
-    imgSrc: '#',
-    fullName: 'Tom Fox',
-    stats: {
-        fb: '10000',
-        insta: '12500',
-        tel: '8600'
-    }
-};
-
-const userCards = document.getElementById('userCardsContainer');
-userCards.append(createCard(user)); 
-
-
-
+const userCards = document.getElementById('userCardsContainer'); //ulu
+users.forEach( u => userCards.append(createCard(u)))
