@@ -37,12 +37,30 @@ textDecor.forEach((el) => {
 });
 
 //2. Создайте список. В каждый элемент списка напишите текст свой, например дни недели или цвета радуги.
-/*
-
-
 //2* выделите каждый элемент списка случайным цветом поменяв ему цвет текста или фон
 
 
+function liContent() {
+    let result = [];
+
+    for(let i=1; i<=7; i++) {
+    let li = document.createElement('li');
+    li.append(i);
+    result.push(li);
+  }
+  result.forEach((el, i) => {
+    el.style.background = 'grey';
+    if (i==0) el.innerText = 'Monday', el.style.color = 'blue';
+    if (i==1) el.innerText = 'Tuesday', el.style.color = 'yellow';
+    if (i==2) el.innerText = 'Wednesday', el.style.color = 'green';
+    if (i==3) el.innerText = 'Thursday', el.style.color = 'black';
+    if (i==4) el.innerText = 'Friday', el.style.color = 'silver';
+    if (i==5) el.innerText = 'Saturday', el.style.color = 'gold';
+    if (i==6) el.innerText = 'Sanday', el.style.color = 'aqua';
+  })
+  return result;
+}
+task2.append(...liContent());
 
 /*
 3* по просьбе трудящихся :)
@@ -53,7 +71,7 @@ const product = {
     img: '#',
     title: 'Pasta',
     description: {
-        weight: 'weight: 500gr',
+        weight:'weight: 500gr',
         price:'price: 0.85 euro',
         producing:'producing country: Italy',
     }
@@ -75,7 +93,7 @@ function createTitleProduct(title){
     return cardTitleProduct;
 }
 
-function createDescriptionCont (description){
+function createDescriptionCont(description){
     const descriptionCont = document.createElement('div');
     descriptionCont.classList.add('descrCont');
     descriptionCont.innerText = description;
