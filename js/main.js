@@ -93,24 +93,24 @@ function createTitleProduct(title){
     return cardTitleProduct;
 }
 
-function createDescriptionCont(description){
+function createDescriptionCont(descriptions){
     const descriptionCont = document.createElement('div');
     descriptionCont.classList.add('descrCont');
-    descriptionCont.innerText = description;
+    descriptionCont.innerText = 'description:';
 //weight
     const description1 = document.createElement('p');
     description1.classList.add('weight');
-    description1.innerText = weight;
+    description1.innerText = product.description.weight;
     descriptionCont.append(description1);
 //price
     const description2 = document.createElement('p');
-    description2.classList.add('descrCont', 'price');
-    description2.innerText = price;
+    description2.classList.add('descrCont','price');
+    description2.innerText = product.description.price;
     descriptionCont.append(description2);
 //producing
     const description3 = document.createElement('p');
-    description3.classList.add('descrCont', 'producing');
-    description3.innerText = producing;
+    description3.classList.add('descrCont','producing');
+    description3.innerText = product.description.producing;
     descriptionCont.append(description3);
 
     return descriptionCont;
@@ -119,12 +119,12 @@ function createDescriptionCont(description){
 function createCard (objectCard){
     const card = document.createElement('div');
     card.classList.add('cardCont');
-    card.append(createProductImage(objectCard.img));
+    card.append(createProductImage(objectCard.imgSrc));
 
     const cardInformation = document.createElement('div');
     cardInformation.classList.add('infoCont');
     cardInformation.append(createTitleProduct(objectCard.title));
-    cardInformation.append(createTitleProduct(objectCard.description));
+    cardInformation.append(createDescriptionCont(objectCard.descriptions));
 
     card.append(cardInformation);
     return card;
