@@ -42,13 +42,16 @@ textDecor.forEach((el) => {
 
 function liContent() {
     let result = [];
-
+    let arrDeys = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sanday'];
+    let arrColors =['blue','yellow','green','black','silver','gold','aqua'];
     for(let i=1; i<=7; i++) {
     let li = document.createElement('li');
     li.append(i);
     result.push(li);
   }
   result.forEach((el, i) => {
+      el.innerText=arrDeys[i],el.style.color=arrColors[i]
+      /*
     el.style.background = 'grey';
     if (i==0) el.innerText = 'Monday', el.style.color = 'blue';
     if (i==1) el.innerText = 'Tuesday', el.style.color = 'yellow';
@@ -57,6 +60,7 @@ function liContent() {
     if (i==4) el.innerText = 'Friday', el.style.color = 'silver';
     if (i==5) el.innerText = 'Saturday', el.style.color = 'gold';
     if (i==6) el.innerText = 'Sanday', el.style.color = 'aqua';
+    */
   })
   return result;
 }
