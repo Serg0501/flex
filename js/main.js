@@ -1,74 +1,41 @@
 /*
-const divArr = document.querySelectorAll('.sliderImg');
-
-const l = document.querySelectorAll('sliderImg');
-const b = document.querySelectorAll('sliderBigImg');
-
-function bigImg (e) {
-    
-    this.style.
-    this.removeEventListener('click', bigImg);
-    this.addEventListener('clik', littleImg);
-}
-
-function littleImg (e) {
-
-    this.style.background = 'white';
-    this.removeEventListener('click', littleImg);
-    this.addEventListener('click', bigImg);
-
-}
-
-divArr.forEach( el => el.addEventListener('click', bigImg));
+Todo
+Доделать todo задачник. Реализовать добавление, удаление, обновление задач. 
+Задача - текст, время выполнение, можно deadline.
 */
 
+//Selectors
 
-/*
-const r = /[a-z]+/g;
-const s = 'Hello Java script regExp 123 !';
+const list = document.getElementById('tasks');
+const btnAdd = document.getElementById('btnAdd');
+const btnDel = document.getElementById('btnDel');
+const task = document.getElementById('task');
 
-console.log(r.test(s));
-// test вернет true/false
+//EventListeners
 
-//поиск
-//1 match / matchAll
-//2 search
+btnAdd.addEventListener('click', addNewTask);
+btnDel.addEventListener('click', deleteCheckTasks);
 
-console.log(s.search(r));
+//Functions
 
-console.log(s.match(r));
-*/
-/*
-const regColor = /#[0-9A-F]{6}/g;
-const arr = ['#112233', '#FA34B2', 'BB1122', '#ab1122', '112233'];
+function addNewTask(event) {
+    const item = document.createElement('li');
+    item.innerText = task.value;
+    item.append(addCheckbox());
+    list.append(item);
+    task.value = "";
+};
 
-for(let i=0; i<arr.length; i++){
-    console.log(regColor.test(arr[i]));
+function addCheckbox(){
+    const checkElem = document.createElement('input');
+    checkElem.type = 'checkbox';
+    checkElem.classList.add('check');
+    return checkElem;
 }
-*/
-/*
-let container = document.getElementById('container');
-const count = 8;
-for(let i=1; i<=count; i++){
-    const slide = document.createElement('div');
-    slide.classList.add('image');
-    container.append(slide);
-    function clickOn() {
-      slide.style.width = '250px';
-   };
-    slide.addEventListener('click', clickOn);
 
-    slide.addEventListener('mouseleave', () => {
-        slide.style.width = '50px';
-    } )
+function deleteCheckTasks(event){
+    const deletedTasks = document.querySelectorAll('input[type="checkbox"]:checked');
+    deletedTasks.forEach(el => el.parentNode.remove());
 }
-*/
 
-let box = document.querySelector('.container');
-let sides = document.querySelectorAll('.box');
 
-sides.forEach((side, i) => {
-    side.addEventListener('click', () => {
-        box.style.transform = `rotateX(-15deg) rotateY(-${i*60}deg)`;
-    })
-});
