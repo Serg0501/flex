@@ -4,38 +4,62 @@ Todo
 Задача - текст, время выполнение, можно deadline.
 */
 
-//Selectors
+const taskTodo = document.getElementById('taskTodo');//input
+const buttonAdd = document.getElementById('buttonAdd');
+const listTodo = document.getElementById('listTodo');//ul
 
-const list = document.getElementById('tasks');
-const btnAdd = document.getElementById('btnAdd');
-const btnDel = document.getElementById('btnDel');
-const task = document.getElementById('task');
+buttonAdd.addEventListener('click', addNewTask);
+listTodo.addEventListener('click', delTask);
 
-//EventListeners
-
-btnAdd.addEventListener('click', addNewTask);
-btnDel.addEventListener('click', deleteCheckTasks);
-
-//Functions
-
-function addNewTask(event) {
-    const item = document.createElement('li');
-    item.innerText = task.value;
-    item.append(addCheckbox());
-    list.append(item);
-    task.value = "";
+function addNewTask(e){
+    //li
+    const newTodo = document.createElement('li');
+    newTodo.classList.add('todo');
+    newTodo.innerText = taskTodo.value;
+    listTodo.append(newTodo);
+    //очистка поля ввода
+    taskTodo.value = "";   
+    //Check
+    const checkButton = document.createElement('button');
+    checkButton.innerHTML = `<i class="fas fa-check"></i>`;
+    checkButton.classList.add('checkBtn');
+    listTodo.append(checkButton);
+    //Del
+    const delButton = document.createElement('button');
+    delButton.innerHTML = `<i class="fas fa-trash"></i>`;
+    delButton.classList.add('delBtn');
+    listTodo.append(delButton);
+    //Important
+    const impButton = document.createElement('button');
+    impButton.innerHTML = `<i class="fa-solid fa-star"></i>`;
+    impButton.classList.add('impBtn');
+    listTodo.append(impButton);
 };
 
-function addCheckbox(){
-    const checkElem = document.createElement('input');
-    checkElem.type = 'checkbox';
-    checkElem.classList.add('check');
-    return checkElem;
-}
+function delTask(e){
+    const item = e.target;
 
-function deleteCheckTasks(event){
-    const deletedTasks = document.querySelectorAll('input[type="checkbox"]:checked');
-    deletedTasks.forEach(el => el.parentNode.remove());
-}
+    if (item.classList[0] === 'delBtn'){
+    const todo = item.parentElement;
+    todo.remove();   
+    };
+
+if (item.classList[0] === 'checkBtn') {
+    const todo = item.parentElement;
+    todo.classList.toggle("completed");
+    };
+
+if (item.classList[0] === 'impBtn') {
+    const todo = item.parentElement;
+    todo.classList.toggle("marked");
+    };
+
+};
+
+
+
+
+
+
 
 
