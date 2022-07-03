@@ -4,14 +4,34 @@
     box-sizing: border-box;
 }
 
+.container{
+    width: 200px;
+    min-height: 300px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 50px 0 0 100px;
+   background-color:darkgrey;
+}
+
+.buttonAdd{
+    cursor: pointer;
+    transition: all 0.3s ease;  
+}
+
+
+#listTodo{
+    list-style: none;
+}
+
+.todo{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .fa-trash,
 .fa-check,
 .fa-star {
-  pointer-events: none;
-}
-
-.delete{
-    
+    pointer-events: none;
 }
 
 .completed {
@@ -20,6 +40,7 @@
   }
   
 .marked{
+    font-weight: bold;
     color: red;
 }
 

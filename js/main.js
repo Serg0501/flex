@@ -12,28 +12,33 @@ buttonAdd.addEventListener('click', addNewTask);
 listTodo.addEventListener('click', delTask);
 
 function addNewTask(e){
+    //div
+    const divTodo = document.createElement('div');
+    divTodo.classList.add('todo');
     //li
     const newTodo = document.createElement('li');
-    newTodo.classList.add('todo');
+    newTodo.classList.add('todoItem');
     newTodo.innerText = taskTodo.value;
-    listTodo.append(newTodo);
+    divTodo.appendChild(newTodo);
     //очистка поля ввода
     taskTodo.value = "";   
     //Check
     const checkButton = document.createElement('button');
     checkButton.innerHTML = `<i class="fas fa-check"></i>`;
     checkButton.classList.add('checkBtn');
-    listTodo.append(checkButton);
+    divTodo.appendChild(checkButton);
     //Del
     const delButton = document.createElement('button');
     delButton.innerHTML = `<i class="fas fa-trash"></i>`;
     delButton.classList.add('delBtn');
-    listTodo.append(delButton);
+    divTodo.appendChild(delButton);
     //Important
     const impButton = document.createElement('button');
     impButton.innerHTML = `<i class="fa-solid fa-star"></i>`;
     impButton.classList.add('impBtn');
-    listTodo.append(impButton);
+    divTodo.appendChild(impButton);
+
+    listTodo.appendChild(divTodo);
 };
 
 function delTask(e){
@@ -46,15 +51,18 @@ function delTask(e){
 
 if (item.classList[0] === 'checkBtn') {
     const todo = item.parentElement;
-    todo.classList.toggle("completed");
+    todo.classList.toggle('completed');
     };
 
 if (item.classList[0] === 'impBtn') {
     const todo = item.parentElement;
-    todo.classList.toggle("marked");
+    todo.classList.toggle('marked');
     };
 
 };
+
+
+
 
 
 
