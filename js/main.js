@@ -1,70 +1,28 @@
-/*
-Todo
-Доделать todo задачник. Реализовать добавление, удаление, обновление задач. 
-Задача - текст, время выполнение, можно deadline.
-*/
 
-const taskTodo = document.getElementById('taskTodo');//input
-const buttonAdd = document.getElementById('buttonAdd');
-const listTodo = document.getElementById('listTodo');//ul
+let active =0;
+const images = document.querySelectorAll('img');
 
-buttonAdd.addEventListener('click', addNewTask);
-listTodo.addEventListener('click', delTask);
+document.querySelector('.btnN').onclick = () =>{
+    images[active].classList.remove('activImg');
+    if (active+1 == images.length){
+        active = 0;
+    }
+    else{
+        active++;
+    }
+    images[active].classList.add('activImg');
+}
 
-function addNewTask(e){
-    //div
-    const divTodo = document.createElement('div');
-    divTodo.classList.add('todo');
-    //li
-    const newTodo = document.createElement('li');
-    newTodo.classList.add('todoItem');
-    newTodo.innerText = taskTodo.value;
-    divTodo.appendChild(newTodo);
-    //очистка поля ввода
-    taskTodo.value = "";   
-    //Check
-    const checkButton = document.createElement('button');
-    checkButton.innerHTML = `<i class="fas fa-check"></i>`;
-    checkButton.classList.add('checkBtn');
-    divTodo.appendChild(checkButton);
-    //Del
-    const delButton = document.createElement('button');
-    delButton.innerHTML = `<i class="fas fa-trash"></i>`;
-    delButton.classList.add('delBtn');
-    divTodo.appendChild(delButton);
-    //Important
-    const impButton = document.createElement('button');
-    impButton.innerHTML = `<i class="fa-solid fa-star"></i>`;
-    impButton.classList.add('impBtn');
-    divTodo.appendChild(impButton);
-
-    listTodo.appendChild(divTodo);
-};
-
-function delTask(e){
-    const item = e.target;
-
-    if (item.classList[0] === 'delBtn'){
-    const todo = item.parentElement;
-    todo.remove();   
-    };
-
-if (item.classList[0] === 'checkBtn') {
-    const todo = item.parentElement;
-    todo.classList.toggle('completed');
-    };
-
-if (item.classList[0] === 'impBtn') {
-    const todo = item.parentElement;
-    todo.classList.toggle('marked');
-    };
-
-};
-
-
-
-
-
+document.querySelector('.btnP').onclick = () =>{
+    images[active].classList.remove('activImg');
+    if (active <= 0){
+        active = images.length-1;
+    }
+    else{
+        active--;
+    }
+    images[active].classList.add('activImg');
+}
 
 
 

@@ -5,43 +5,33 @@
 }
 
 .container{
-    width: 200px;
-    min-height: 300px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap; 
+}
+
+img{
+    width: 100px;
+    height: 128px;
+    opacity: 0.5;
+}
+
+.activImg{
     border: 2px solid black;
     border-radius: 5px;
-    margin: 50px 0 0 100px;
-   background-color:darkgrey;
+    width: 200px;
+    height: 256px;
+    opacity: 1;
 }
 
-.buttonAdd{
+.btnP{
+    margin-right: 10px;
     cursor: pointer;
-    transition: all 0.3s ease;  
 }
 
-
-#listTodo{
-    list-style: none;
+.btnN{
+    margin-left: 10px;
+    cursor: pointer;
 }
-
-.todo{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.fa-trash,
-.fa-check,
-.fa-star {
-    pointer-events: none;
-}
-
-.completed {
-    text-decoration: line-through;
-    opacity: 0.5;
-  }
-  
-.marked{
-    font-weight: bold;
-    color: red;
-}
-
-
