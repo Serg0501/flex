@@ -1,31 +1,42 @@
+//Btn
+const upBtn = document.querySelector('.upBtn');
+const downBtn = document.querySelector('.downBtn');
+//Containers
+const leftContainer = document.querySelector('.leftContainer');
+const rightContainer = document.querySelector('.rightContainer');
+//считаем слайды в rightContainer
+const count = rightContainer.querySelectorAll('div').length;//wtf
+const container = document.querySelector('.container');
 
-let active =0;
-const images = document.querySelectorAll('img');
+let activ = 0;
 
-document.querySelector('.btnN').onclick = () =>{
-    images[active].classList.remove('activImg');
-    if (active+1 == images.length){
-        active = 0;
-    }
-    else{
-        active++;
-    }
-    images[active].classList.add('activImg');
-}
+leftContainer.style.top = `-${(count-1)*100}vh`;
 
-document.querySelector('.btnP').onclick = () =>{
-    images[active].classList.remove('activImg');
-    if (active <= 0){
-        active = images.length-1;
-    }
-    else{
-        active--;
-    }
-    images[active].classList.add('activImg');
-}
+upBtn.addEventListener('click', () => {
+    changeSlide('up')
+});
 
+downBtn.addEventListener('click', () => {
+    changeSlide('down')
+});
 
+function changeSlide(e) {
+    if (e === 'up') {
+       activ++;
+       if (activ === count){
+           activ = 0;
+       }
+    } else if (e === 'down'){
+        activ--;
+        if (activ < 0){
+            activ = count-1;
+        }
+    } 
 
 
+const height = container.clientHeight;
 
+leftContainer.style.transform = `translateY(${activ * height}px)`;
+rightContainer.style.transform = `translateY(-${activ * height}px)`;
+};
 
